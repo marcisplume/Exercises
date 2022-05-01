@@ -19,9 +19,13 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        // parbaude GIT no WEB
-        // pārbaude no GIT 
-        throw new NotImplementedException();
+        if (cigars >= 40 && (isWeekend || cigars <= 60))
+
+            return true;
+
+        return false;
+
+        
     }
 
     /// <summary>
@@ -38,7 +42,31 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+         //1. Ja kāds ir zem 2 tad return 0;
+
+        if (you <= 2 || date <= 2)
+
+            return 0;
+
+        if (you >= 8 || date >= 8)
+
+            return 2;
+
+        //if (date >=8 || you>=8) ;
+        return 1;
+
+
+
+        // 2. Ja kāds viens vai otrs ir >=8 tad return 2
+
+        if (you >= 8 || you > 2 && date >= 8 || date > 2) ;
+
+        return 2;
+
+
+
+        return 1;
+
     }
 
     /// <summary>
@@ -53,7 +81,43 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        //int highertemp = 90;
+
+        //if (isSummer)
+
+        //{
+        //    highertemp +=10;
+
+        //}
+
+
+        //if (temp <60)
+
+        //    return false;
+
+        //if (temp > highertemp)
+
+        //    return true;
+
+
+        if (temp < 60)
+
+            return false;
+
+        if (isSummer && temp <= 100 || !isSummer && temp <= 90)
+
+            return true;
+
+        return false;
+
+
+        //int labatemperatura = 90;
+
+
+        //if (isSummer && labatemperatura +10)
+
+        //        return true;
+
     }
 
     /// <summary>
@@ -69,7 +133,20 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        if (speed <= 60 || (isBirthday && speed <= 65))
+
+            return 0;
+
+        if (speed <= 80 || (isBirthday && speed <= 85))
+
+            return 1;
+
+        if (speed >= 81 || (isBirthday && speed >= 86))
+
+            return 2;
+
+        return 0;
+
     }
 
     /// <summary>
@@ -82,7 +159,16 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a + b < 10 || a + b > 20)
+            return a + b;
+
+        if (a + b >= 10 || a + b <= 20)
+            return 20;
+
+
+
+        return 20;
+
     }
 
     /// <summary>
@@ -98,7 +184,35 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        if (vacation && day == 0 || vacation && day == 6)
+
+        {
+            Console.WriteLine("Hei!");
+
+
+            return "off";
+        }
+
+        if (vacation && day >= 1 || vacation && day < 6)
+
+            return "10:00";
+
+        if (!vacation && day == 0 || !vacation && day == 6)
+
+            return "10:00";
+
+        if (!vacation && day >= 1 || !vacation && day < 6)
+
+            return "7:00";
+
+
+
+        // Ja ir darba nedēļa tad darba dienās 7 un brīvdienās 10
+        // Ja ir atvaļinājums tad darba dienās 10 un brīvdienas off
+
+
+        return "7:00";
+
     }
 
     /// <summary>
@@ -112,7 +226,25 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        //int aM = (Math.Abs(a));
+
+        //int bM = (Math.Abs(b));
+
+        if ((a + b == 6) || (a - b == 6) || (b - a == 6))
+
+        {
+            return true;
+        }
+
+
+        if (a == 6 || b == 6)
+        {
+            return true;
+
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -126,7 +258,19 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        throw new NotImplementedException();
+        if (!outsideMode && n >= 1 && !outsideMode && n <= 10)
+        {
+            return true;
+        }
+
+
+        if (outsideMode && n <= 1 || outsideMode && n >= 10)
+
+        { return true; }
+
+
+        return false;
+
     }
 
     /// <summary>
@@ -139,7 +283,14 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        throw new NotImplementedException();
+        if (n % 11 == 0 || n % 11 == 1)
+            {
+                return true;
+            }
+        
+       
+            return false;
+
     }
 
     /// <summary>
@@ -152,7 +303,16 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        throw new NotImplementedException();
+        if ((n - 1) % 20 == 0 || (n - 2) % 20 == 0)
+        {
+            return true;
+
+        }
+
+        
+
+        return false;
+
     }
 
     /// <summary>
@@ -165,7 +325,23 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        throw new NotImplementedException();
+        if (n % 3 == 0 && n% 5 == 0)
+        {
+            return false;  
+                }
+
+        if (n% 3==0)
+        { 
+            return true;
+        }
+
+        if (n% 5==0)
+        { 
+            return true;
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -179,7 +355,12 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-        throw new NotImplementedException();
+        if ((n+1)%20 == 0 || (n+2)%20 == 0)
+            return true;
+        
+        
+        return false;
+
     }
 
     /// <summary>
@@ -193,7 +374,13 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
+        if (num % 10 == 1 || num % 10 ==2 || num %10 ==8 || num %10 ==9 || num% 10 ==0)
+        {
+            return true;
+        }    
+
+        return false;
+
     }
 
     /// <summary>
@@ -206,7 +393,16 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        throw new NotImplementedException();
+        if ((a >= 13 && a <= 19) || b>=13 && b<=19)
+
+        { 
+            return 19;
+        
+        }
+
+
+        return a + b;
+
     }
 
     /// <summary>
@@ -220,7 +416,24 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        throw new NotImplementedException();
+        if (isMorning && isMom  && isAsleep)
+        {
+            return false; 
+        }
+
+        if (isMorning && isMom && !isAsleep)
+        {
+            return true;
+        }
+
+        if (!isMorning && !isAsleep)
+        { 
+            return true;
+        }
+            
+
+        return false;
+
     }
 
     /// <summary>
@@ -236,7 +449,33 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        throw new NotImplementedException();
+        if (tea < 5 || candy < 5)
+        {
+            return 0;
+        }
+
+        if ((tea >= 2*candy || candy >= 2* tea) ||(tea >= 2 * candy && candy >= 2 * tea))
+        {
+            return 2;
+        }
+
+        if (tea >= 5 && candy >= 5)
+        {
+            return 1;
+        }
+
+
+        // Ir 1 Laba ja gan tēja gan saldumi ir 5
+
+        // Ja saldumu vai tēja ir divas reiz vairāk nekā otra  tad 2 jeb lieliska ballīte
+
+        // Ja saldumu vai tējas ir mazāk par 5 ir 0 jeb slikti
+        
+        
+        
+        
+        return 0;
+
     }
 
     /// <summary>
@@ -250,7 +489,24 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        throw new NotImplementedException();
+        if (str.StartsWith("f") && str.EndsWith("b"))
+            {
+            return "FizzBuzz";
+            }
+
+        if (str.StartsWith("f"))
+        {
+            return "Fizz"; 
+        
+        }
+
+        if (str.EndsWith("b"))
+        {
+            return "Buzz";
+        }
+
+            return str;
+
     }
 
     /// <summary>
@@ -266,7 +522,26 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        if (n % 3 == 0 && n % 5 == 0)
+        {
+            return "FizzBuzz!";
+
+        }
+
+        if (n % 5 == 0)
+        {
+            return "Buzz!";
+        }
+
+
+        if (n % 3 == 0)
+        {
+            return "Fizz!";
+        }
+
+
+        return n + "!";
+
     }
 
     /// <summary>
@@ -278,7 +553,12 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a + b == c || a + c == b || b + c == a)
+        {
+            return true;
+        }
+        
+        return false;
     }
 
     /// <summary>
@@ -291,7 +571,39 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+
+       //if (bOk && a > c && b < a)
+       //         { return true; }
+        
+        if (!bOk && b > a && c > b || bOk && c > b)
+        {
+            return true;
+        }
+
+        
+        return false;
+
+    }
+
+    /// <summary>
+    /// Given three ints, a b c, return true if b is greater than a, and c is greater than b. However,
+    /// with the exception that if "bOk" is true, b does not need to be greater than a.
+    /// 
+    /// inOrder(1, 2, 4, false) → true
+    /// inOrder(1, 2, 1, false) → false
+    /// inOrder(1, 1, 2, true) → true
+    /// </summary>
+    public bool InOrder(int a, int b, int c, bool bOk)
+    {
+        if (!bOk && b > a && c > b || bOk && c > b)
+        {
+            return true;
+        }
+
+        
+        return false;
+
+
     }
 
     /// <summary>
@@ -305,7 +617,16 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if (a < b && b < c && !bOk)
+            return true;
+
+        if (bOk && a <= b && b <= c )
+        {
+            return true;
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -319,7 +640,17 @@ public class Logic1
     /// </summary>
     public bool LastDigit(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        int lasta = Math.Abs(a % 10);
+        int lastb = Math.Abs (b % 10);
+        int lastc = Math.Abs(c % 10);
+
+
+        if (lasta == lastb || lastb == lastc || lasta == lastc)
+                                           
+                return true;
+        
+        return false;
+
     }
 
     /// <summary>
@@ -332,7 +663,12 @@ public class Logic1
     /// </summary>
     public bool LessBy10(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a -b >=10 || a -c >=10 || b - c >=10 || b - a >= 10 || c - a >=10 || c -b >=10)
+        {
+            return true;
+        }
+        return false;
+
     }
 
     /// <summary>
@@ -346,7 +682,20 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
-        throw new NotImplementedException();
+        if (noDoubles && die2 == die1 && die1 == 6 && die2 == 6)
+
+            return die2 + 1;
+
+
+        if (noDoubles && die1 == die2)
+        {
+            return die1 + die2 + 1;
+        }
+
+        
+
+        return die1 + die2;
+
     }
 
     /// <summary>
@@ -361,7 +710,25 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        throw new NotImplementedException();
+        int amax;
+        int bmax;
+
+        amax = a % 5;
+        bmax = b % 5;
+
+        if (a == b)
+        {
+            return 0;
+        }
+
+        if (amax == bmax)
+        {
+            return Math.Min(a, b);
+        }
+             
+
+       return Math.Max(a, b);
+
     }
 
     /// <summary>
@@ -376,7 +743,28 @@ public class Logic1
     /// </summary>
     public int RedTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        int summakopa;
+        summakopa = a+b+c;
+
+
+        if (summakopa == 6)
+
+            return 10;
+
+
+        if ( a == b && b == c && a == 1 || a == b && b == c && a == 0)
+        {
+            return 5;
+        }
+
+
+        if (b != a && c != a)
+        {  return 1; 
+    }
+        
+        
+        return 0;
+
     }
 
     /// <summary>
@@ -390,7 +778,22 @@ public class Logic1
     /// </summary>
     public int GreenTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a == b && b==c && a==c)
+        {
+            return 20;
+        }
+
+
+        if (a == b && a != c || a == c && a != b || b == c && b != a)
+        {
+            return 10;
+        }
+
+        // ja divi vienādi tad return 10
+        
+        
+        return 0;
+
     }
 
     /// <summary>
@@ -405,7 +808,28 @@ public class Logic1
     /// </summary>
     public int BlueTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        int ab;
+        int bc;
+        int ac;
+
+        ab = a+b;
+        bc = b+c;
+        ac = c+a;
+
+        if (ab == 10 || bc == 10 || ac == 10)
+        {
+            return 10;
+        }
+        
+
+        if (ab - bc >=10 || ab - ac >=10)
+        {
+            return 5;
+        }
+
+
+        return 0;
+
     }
 
     /// <summary>
@@ -419,7 +843,31 @@ public class Logic1
     /// </summary>
     public bool ShareDigit(int a, int b)
     {
-        throw new NotImplementedException();
+        int LA;
+
+        int KA;
+
+        int LB;
+
+        int KB;
+
+
+        LA = a % 10;
+        LB = b % 10;
+
+        KA = a / 10;
+        KB = b / 10;
+
+       
+
+        if (KA == LB || KA == KB || LA == LB || LA == KB)
+
+        {
+            return true;
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -434,7 +882,40 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        throw new NotImplementedException();
+        int absumma;
+
+        absumma = a + b;
+
+        string abVardiem;
+
+        abVardiem = absumma.ToString();
+
+        int tekstaGarums;
+
+        tekstaGarums = abVardiem.Length;
+
+        string aVardiem;
+
+        aVardiem = a.ToString();
+
+        int aGarums;
+        aGarums = aVardiem.Length;
+
+        
+        if (aGarums == tekstaGarums)
+        {
+            return a + b;
+        }
+
+
+        if (aGarums < tekstaGarums)
+        {
+            return a;
+        }
+
+
+        return a;
+
     }
 }
 
