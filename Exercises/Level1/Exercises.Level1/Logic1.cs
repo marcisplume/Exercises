@@ -19,6 +19,7 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
+        // parbaude GIT no WEB
         throw new NotImplementedException();
     }
 
