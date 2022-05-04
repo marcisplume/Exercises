@@ -18,7 +18,7 @@ public class Warmup1
     /// </summary>
     public bool SleepIn(bool weekday, bool vacation)
     {
-        throw new NotImplementedException();
+        return false;
     }
 
     /// <summary>
