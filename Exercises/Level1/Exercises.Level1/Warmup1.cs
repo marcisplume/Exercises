@@ -18,6 +18,10 @@ public class Warmup1
     /// </summary>
     public bool SleepIn(bool weekday, bool vacation)
     {
+        if (weekday && vacation || !weekday)
+        {
+            return true;
+        }
         return false;
     }
 
@@ -33,6 +37,11 @@ public class Warmup1
     /// </summary>
     public bool MonkeyTrouble(bool aSmile, bool bSmile)
     {
+        if (aSmile && bSmile || !aSmile && !bSmile)
+        { return true; }
+
+        return false;
+
         throw new NotImplementedException();
     }
 
@@ -46,7 +55,12 @@ public class Warmup1
     /// </summary>
     public int SumDouble(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a == b)
+        {
+            return (a + b) * 2;
+        }
+
+        return a + b;
     }
 
     /// <summary>
@@ -59,6 +73,13 @@ public class Warmup1
     /// </summary>
     public int Diff21(int n)
     {
+
+        if (n > 21)
+        {
+            return Math.Abs((n - 21) * 2);
+        }
+
+        return 21 - n;
         throw new NotImplementedException();
     }
 
@@ -71,6 +92,13 @@ public class Warmup1
     /// </summary>
     public bool ParrotTrouble(bool talking, int hour)
     {
+
+        if (talking && hour > 20 || talking && hour < 7)
+        {
+            return true;
+        }
+
+        return false;
         throw new NotImplementedException();
     }
 
@@ -83,7 +111,12 @@ public class Warmup1
     /// </summary>
     public bool Makes10(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a + b == 10 || a == 10 || b == 10)
+        {
+            return true;
+        }
+        
+        return false;
     }
 
     /// <summary>
@@ -95,7 +128,18 @@ public class Warmup1
     /// </summary>
     public bool NearHundred(int n)
     {
-        throw new NotImplementedException();
+
+        
+
+        if ( n < 90 && n > 110 || n <190 && n >210)
+        { return false; }
+
+        if (n >= 90 && n <= 110 || n >= 190 && n <= 210)
+
+            return true;
+
+        return false;
+
     }
 
     /// <summary>

@@ -593,18 +593,7 @@ public class Logic1
     /// inOrder(1, 2, 1, false) → false
     /// inOrder(1, 1, 2, true) → true
     /// </summary>
-    public bool InOrder(int a, int b, int c, bool bOk)
-    {
-        if (!bOk && b > a && c > b || bOk && c > b)
-        {
-            return true;
-        }
-
-        
-        return false;
-
-
-    }
+  
 
     /// <summary>
     /// iven three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or
