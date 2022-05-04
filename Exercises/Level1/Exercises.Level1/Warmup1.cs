@@ -152,7 +152,17 @@ public class Warmup1
     /// </summary>
     public bool PosNeg(int a, int b, bool negative)
     {
-        throw new NotImplementedException();
+        if (!negative && a < 0 && b > 0 || !negative && a > 0 && b < 0)
+        {
+            return true;
+        }
+         
+        if (negative && a < 0 && b< 0)
+        {
+            return true; 
+        }
+        
+        return false;
     }
 
     /// <summary>
@@ -165,7 +175,37 @@ public class Warmup1
     /// </summary>
     public string NotString(string str)
     {
-        throw new NotImplementedException();
+
+        bool sakasAra;
+
+        sakasAra = str.StartsWith("not");
+        
+        
+        if (sakasAra)
+        { return str; }
+
+        //string not;
+        //not = "not";
+
+        //string pirmieburti;
+
+        //pirmieburti = str.Substring(0, 3);
+
+        //bool vaiNot;
+
+        //vaiNot = string.Equals(not, pirmieburti);
+
+        ////if (str == "not")
+        ////{ return str; }
+
+        //if (!vaiNot)
+        //{
+        //    return "not " + str;
+        //}
+
+              
+
+        return "not " + str;
     }
 
     /// <summary>
@@ -178,7 +218,18 @@ public class Warmup1
     /// </summary>
     public string MissingChar(string str, int n)
     {
-        throw new NotImplementedException();
+        string bezChr;
+
+        bezChr = str.Replace(n, "")
+            
+            
+            return bezChr;
+        
+        // Return vārds ar str.KAUTKADA funkcija, kas noņemt konkrēto burtu
+
+        return str;
+        
+        
     }
 
     /// <summary>
