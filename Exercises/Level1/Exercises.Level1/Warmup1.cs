@@ -220,7 +220,7 @@ public class Warmup1
     {
         string bezChr;
 
-        bezChr = str.Replace(n, "")
+        bezChr = str.Remove(n, 1);
             
             
             return bezChr;
@@ -241,7 +241,35 @@ public class Warmup1
     /// </summary>
     public string FrontBack(string str)
     {
-        throw new NotImplementedException();
+
+        string vidus;
+        string pirmais;
+        string pedejais;
+        int vardagarums;
+
+        vardagarums = str.Length;
+
+        if (vardagarums <= 1)
+            return str;
+
+        pirmais = str.Substring(0,1);
+        pedejais = str.Substring(str.Length-1);
+        vidus = str.Substring(1, str.Length-2);
+
+        return pedejais + vidus + pirmais;
+
+
+        // pēdējais burts 
+        // pirmais burts
+        // vārds kuram atņemts pirmais un pēdējais burts
+        // Return pirmais + sakne +  pēdējais
+
+        // iegūt pirmo un pēdējo burtu
+        // ielikt pirmo un pēdējo burtu
+        
+        
+        
+        
     }
 
     /// <summary>
@@ -254,11 +282,64 @@ public class Warmup1
     /// </summary>
     public string Front3(string str)
     {
+
+
+        int vardagarums2 = str.Length;
+
+        if (vardagarums2 > 3)
+            vardagarums2 = 3;
+
+        string fragments = str.Substring(0, vardagarums2);
+
+        return fragments + fragments + fragments;
+
+
+        //if (vardagarums2 > 3)
+
+        //    return str.Substring(0, 3) + str.Substring(0, 3) + str.Substring(0, 3);
+        //else
+        //    return str + str + str;
+
+
+
+
+
+        //string pirmietris;
+        //pirmietris = str.Substring(0, 3);
+        //string mazakparTris;
+        //mazakparTris= str.Substring(0, vardagarums2);
+
+
+        //bool vairakParTris;
+        //vairakParTris = vardagarums2 >= 3;
+
+        //if (!vairakParTris)
+
+        //    return mazakparTris + mazakparTris + mazakparTris;
+
+        //if (vairakParTris)
+        //{
+        //    return pirmietris + pirmietris + pirmietris;
+        //}
+
+
+
+        //else 
+        //{
+        //    return str + str + str;
+        //}
+
+
+        //return str + str + str;
+
+
+
         throw new NotImplementedException();
     }
 
     /// <summary>
-    /// Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+    /// Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". 
+    /// The original string will be length 1 or more.
     /// 
     /// backAround("cat") → "tcatt"
     /// backAround("Hello") → "oHelloo"
@@ -266,7 +347,17 @@ public class Warmup1
     /// </summary>
     public string BackAround(string str)
     {
-        throw new NotImplementedException();
+
+        string lastChar;
+
+        lastChar = str.Substring(str.Length - 1);
+
+        return lastChar + str + lastChar;
+
+
+           
+        
+        
     }
 
     /// <summary>
@@ -279,6 +370,15 @@ public class Warmup1
     /// </summary>
     public bool Or35(int n)
     {
+
+        if (n % 3 == 0 || n % 5 == 0)
+
+            return true;
+
+        return false;
+        
+        
+        
         throw new NotImplementedException();
     }
 
@@ -292,7 +392,22 @@ public class Warmup1
     /// </summary>
     public string Front22(string str)
     {
-        throw new NotImplementedException();
+
+        
+
+        int simboluSkaits;
+        simboluSkaits = str.Length;
+
+        if (simboluSkaits > 2)
+            simboluSkaits = 2;
+
+        string lastChar2;
+
+        lastChar2 = str.Substring(0,simboluSkaits);
+
+        return lastChar2 + str + lastChar2;
+
+                
     }
 
     /// <summary>
@@ -304,7 +419,26 @@ public class Warmup1
     /// </summary>
     public bool StartHi(string str)
     {
-        throw new NotImplementedException();
+        int vardaGarums;
+
+        vardaGarums = str.Length;
+                
+        string issVards;
+
+        if (vardaGarums > 2)
+            vardaGarums = 2;
+
+        issVards = str.Substring(0, vardaGarums);
+
+        if (issVards == "hi")
+            return true;
+
+        
+
+        return false;
+        
+        
+        
     }
 
     /// <summary>
@@ -316,7 +450,14 @@ public class Warmup1
     /// </summary>
     public bool IcyHot(int temp1, int temp2)
     {
-        throw new NotImplementedException();
+        if (temp1 > 100 && temp2 < 0 || temp1 < 0 && temp2 > 100)
+        {
+            return true;
+        }
+        
+        return false;
+
+
     }
 
     /// <summary>
@@ -328,7 +469,13 @@ public class Warmup1
     /// </summary>
     public bool In1020(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a >=10 && a<=20 || b >= 10 && b <= 20)
+        {
+            return true;
+        }
+        
+        
+        return false;
     }
 
     /// <summary>
@@ -341,11 +488,18 @@ public class Warmup1
     /// </summary>
     public bool HasTeen(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        
+        if (a >= 13 && a <= 19 || b >= 13 && b <= 19 || c >= 13 && c <= 19)
+
+            return true;
+        
+        
+        return false;
     }
 
     /// <summary>
-    /// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+    /// We'll say that a number is "teen" if it is in the range 13..19 inclusive. 
+    /// Given 2 int values, return true if one or the other is teen, but not both.
     /// 
     /// loneTeen(13, 99) → true
     /// loneTeen(21, 19) → true
@@ -353,11 +507,27 @@ public class Warmup1
     /// </summary>
     public bool LoneTeen(int a, int b)
     {
-        throw new NotImplementedException();
+        bool vaiA;
+        vaiA = a >= 13 && a <= 19;
+
+        bool vaiB;
+        vaiB = b >= 13 && b <= 19;
+
+        if (vaiA && vaiB)
+            return false;
+
+        if (vaiB && !vaiA || vaiA && !vaiB)
+            return true;
+
+        
+        return false;
+
+        
     }
 
     /// <summary>
-    /// Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+    /// Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. 
+    /// Otherwise, return the string unchanged.
     /// 
     /// delDel("adelbc") → "abc"
     /// delDel("adelHello") → "aHello"
@@ -365,7 +535,31 @@ public class Warmup1
     /// </summary>
     public string DelDel(string str)
     {
-        throw new NotImplementedException();
+
+
+        int vardaGarums2;
+        vardaGarums2 = str.Length;
+      
+
+        if (vardaGarums2 <= 3)
+        return str;
+
+               
+        if (vardaGarums2 > 3)
+            vardaGarums2 = 3;
+
+        string mystr = str.Replace("del", "");
+
+        string issVards2;
+
+        issVards2 = str.Substring(1, vardaGarums2);
+
+        if (issVards2 == "del")
+            return mystr;
+
+        // uzrakstīju, bet nesaprotu kāpēc strādā!!!
+        
+        return str;
     }
 
     /// <summary>
