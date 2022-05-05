@@ -602,6 +602,38 @@ public class Warmup1
     /// </summary>
     public string StartOz(string str)
     {
+        int burtuskaits = str.Length;
+
+        
+
+        string otraisZ = str.Substring(1, 1);
+        bool vaiOtraisZ = otraisZ == "z";
+        string pirmaisO = str.Substring(0, 1);
+        bool vaiPirmaisO = pirmaisO == "o";
+
+        //if (burtuskaits <= 2 && str.Substring (0,0) == "o"&& !vaiOtraisZ)
+        //    return "";
+
+        if (vaiPirmaisO && vaiOtraisZ)
+        {
+            return "oz";
+        }
+        if (vaiPirmaisO || str.Substring(0,1) =="o")
+        {
+            return "o";
+        }
+        if (vaiOtraisZ)
+        {
+            return "z";
+        }
+
+                    return "";
+
+
+        //bool vaiPirmaisO = str.Substring(str, 0, 1);
+
+
+
         throw new NotImplementedException();
     }
 
