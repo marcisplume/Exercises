@@ -571,11 +571,30 @@ public class Warmup1
     /// </summary>
     public bool MixStart(string str)
     {
-        throw new NotImplementedException();
+
+        int vardaGarums3 = str.Length;
+
+        if (vardaGarums3 < 3)
+
+            return false ;
+
+
+        if (vardaGarums3 > 3)
+            vardaGarums3 = 3;
+
+        string issVards2 = str.Substring(1, 2);
+
+        if (issVards2 == "ix")
+            return true;
+
+
+        
+        return false;
     }
 
     /// <summary>
-    /// Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+    /// Given a string, return a string made of the first 2 chars (if present), 
+    /// however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
     /// 
     /// startOz("ozymandias") → "oz"
     /// startOz("bzoo") → "z"
