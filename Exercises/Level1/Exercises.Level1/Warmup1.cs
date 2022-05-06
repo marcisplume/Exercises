@@ -604,21 +604,25 @@ public class Warmup1
     {
         int burtuskaits = str.Length;
 
-        
+        if (burtuskaits >= 0 && burtuskaits <= 2)
+            return str;
+
+        if (burtuskaits >= 3)
+            burtuskaits = str.Length;
 
         string otraisZ = str.Substring(1, 1);
         bool vaiOtraisZ = otraisZ == "z";
         string pirmaisO = str.Substring(0, 1);
         bool vaiPirmaisO = pirmaisO == "o";
 
-        //if (burtuskaits <= 2 && str.Substring (0,0) == "o"&& !vaiOtraisZ)
-        //    return "";
-
+        if (string.IsNullOrEmpty(str))
+            return str;
+          
         if (vaiPirmaisO && vaiOtraisZ)
         {
             return "oz";
         }
-        if (vaiPirmaisO || str.Substring(0,1) =="o")
+        if (vaiPirmaisO)
         {
             return "o";
         }
@@ -627,14 +631,13 @@ public class Warmup1
             return "z";
         }
 
-                    return "";
+        if (!vaiPirmaisO && !vaiOtraisZ)
+            return "";
+
+        return str;
 
 
-        //bool vaiPirmaisO = str.Substring(str, 0, 1);
-
-
-
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
