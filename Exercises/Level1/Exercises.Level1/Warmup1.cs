@@ -811,6 +811,15 @@ public class Warmup1
     /// </summary>
     public string EveryNth(string str, int n)
     {
+        int vGarums = str.Length;
+
+        if (vGarums == 0)
+            return str;
+
+
+
+        return str.Substring(0, 1) + str.Substring(2, 1) + str.Substring(4, 1) + str.Substring(6, 1);
+
         throw new NotImplementedException();
     }
 }
