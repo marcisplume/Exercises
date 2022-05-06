@@ -649,7 +649,9 @@ public class Warmup1
     /// </summary>
     public int IntMax(int a, int b, int c)
     {
-        throw new NotImplementedException();
+
+        return Math.Max(Math.Max(a, b), c);
+        
     }
 
     /// <summary>
@@ -662,11 +664,24 @@ public class Warmup1
     /// </summary>
     public int Close10(int a, int b)
     {
-        throw new NotImplementedException();
+        int aLidzDesmit = Math.Abs(a -10);
+        int bLidzDesmit = Math.Abs(b - 10);
+
+        if (aLidzDesmit == bLidzDesmit)
+            return 0;
+
+        if (aLidzDesmit < bLidzDesmit)
+            return a;
+
+        if (aLidzDesmit > bLidzDesmit)
+            return b;
+
+        return b;
     }
 
     /// <summary>
-    /// Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
+    /// Given 2 int values, return true if they are both in the range 30..40 inclusive, 
+    /// or they are both in the range 40..50 inclusive.
     /// 
     /// in3050(30, 31) → true
     /// in3050(30, 41) → false
@@ -674,11 +689,16 @@ public class Warmup1
     /// </summary>
     public bool In3050(int a, int b)
     {
-        throw new NotImplementedException();
+        if ((a >= 30 && a <= 40 && b >= 30 && b <= 40) || (a >= 40 && a <= 50 && b >= 40 && b <= 50))
+
+            return true;
+        
+        return false;
     }
 
     /// <summary>
-    /// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
+    /// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, 
+    /// or return 0 if neither is in that range.
     /// 
     /// max1020(11, 19) → 19
     /// max1020(19, 11) → 19
@@ -686,7 +706,23 @@ public class Warmup1
     /// </summary>
     public int Max1020(int a, int b)
     {
-        throw new NotImplementedException();
+       bool rangeA = a>=10 && a<=20;
+        bool rangeB = b>=10 && b<=20;
+
+        if (rangeA && rangeB)
+        
+        return Math.Max((int)a, (int)b);
+
+        if (!rangeA && rangeB)
+
+            return b;
+
+        if (rangeA && !rangeB)
+
+            return a;
+
+
+            return 0;
     }
 
     /// <summary>
