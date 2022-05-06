@@ -734,11 +734,20 @@ public class Warmup1
     /// </summary>
     public bool StringE(string str)
     {
-        throw new NotImplementedException();
+        int eSkaits = str.Length - str.Replace("e", "").Length;
+        
+        if (eSkaits >=1 && eSkaits<=3)
+            return true;
+
+        return false;
+
+
+        
     }
 
     /// <summary>
-    /// Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+    /// Given two non-negative int values, return true if they have the same last digit, 
+    /// such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
     /// 
     /// lastDigit(7, 17) → true
     /// lastDigit(6, 17) → false
@@ -746,12 +755,20 @@ public class Warmup1
     /// </summary>
     public bool LastDigit(int a, int b)
     {
-        throw new NotImplementedException();
+        int aPed = a % 10;
+        int bPed = b % 10;
+
+        if(aPed == bPed)
+            return true;
+
+        return false; 
+        
     }
 
     /// <summary>
     /// Given a string, return a new string where the last 3 chars are now in upper case. 
-    /// If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string.
+    /// If the string has less than 3 chars, uppercase whatever is there. 
+    /// Note that str.toUpperCase() returns the uppercase version of a string.
     /// 
     /// endUp("Hello") → "HeLLO"
     /// endUp("hi there") → "hi thERE"
@@ -759,11 +776,34 @@ public class Warmup1
     /// </summary>
     public string EndUp(string str)
     {
-        throw new NotImplementedException();
+        int vGarums = str.Length;
+
+        if (vGarums >= 0 && vGarums<3)
+        {
+            return str.ToUpper();
+        }
+
+        if (vGarums >= 3)
+            vGarums = str.Length;
+
+        {
+            return str.Remove(str.Length - 3) + str.Substring(str.Length - 3).ToUpper();
+        }
+
+        //return str.Length < 3 ? str.ToUpper() : str.Remove(str.Length - 3) + str.Substring(str.Length - 3).ToUpper();
+
+        // VAJAG SKAIDROJUMU PIERAKSTAM!
+
+
+        return str.ToUpper();
+
+
+
     }
 
     /// <summary>
-    /// Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+    /// Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string.
+    /// So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
     ///
     /// everyNth("Miracle", 2) → "Mrce"
     /// everyNth("abcdefg", 2) → "aceg"
