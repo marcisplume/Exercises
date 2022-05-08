@@ -816,9 +816,51 @@ public class Warmup1
         if (vGarums == 0)
             return str;
 
+// nepieciešams saprats garumu
+// saprast kad pārtraukt pievienot +2 vai +3
+// paņemt 0 pozīcijā 1 zīmi 2 pozicijā 1 zīmi
+
+        // a kas ja mēs sākt no beigām
+
+        // Var atrast Char vai izdzēst liekos.
+
+// ja ir tukšuma zīme tad beigt
+
+        int Pirmapoz = 0;
+        int Otrapoz = Pirmapoz + n;
+        int Tresapoz = Otrapoz + n;
+        int Ceturtpoz = Tresapoz + n;
+        int Piektpoz =  Ceturtpoz + n;
+
+        int Vardagarums = str.Length;
+
+        int cikSaiet = Vardagarums % n;
+        int pareizVardagarums = Vardagarums - cikSaiet;
+
+        int cikTaluIet = pareizVardagarums / n;
+
+        if (cikTaluIet == 2 )
+            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1);
+
+        if (cikTaluIet == 3 )
+            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
+
+        if (cikTaluIet == 4)
+            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1) + str.Substring(Piektpoz, 1);
+
+        if (cikTaluIet <= 1)
+            return str.Substring(Pirmapoz, 1);
+
+        //if (n > 0)
+        //    Vardagarums = Vardagarums - cikSaiet;
 
 
-        return str.Substring(0, 1) + str.Substring(2, 1) + str.Substring(4, 1) + str.Substring(6, 1);
+
+
+            //return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
+
+
+            //return str.Substring(0, 1) + str.Substring(2, 1) + str.Substring(4, 1) + str.Substring(6, 1);
 
         throw new NotImplementedException();
     }

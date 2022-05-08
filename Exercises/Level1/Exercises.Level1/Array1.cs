@@ -19,7 +19,13 @@ public class Array1
     /// </summary>
     public bool FirstLast6(int[] nums)
     {
-        throw new NotImplementedException();
+        int first = nums[0];
+        int lastindex = nums.Length - 1;
+        int last = nums[lastindex];
+        return first == 6 || last == 6;
+
+
+       
     }
 
     /// <summary>
@@ -32,7 +38,19 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+        
+        int masivaGarums = nums.Length;
+        int pirmais = nums[0];
+        int noskaidroPedejo = nums.Length-1;
+        int pedejais = nums[noskaidroPedejo];
+
+        return masivaGarums >= 1 && pirmais == pedejais;
+
+        
     }
 
     /// <summary>
@@ -42,6 +60,11 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
+
+
+        return new int[] { 3, 1, 4 };
+        
+        
         throw new NotImplementedException();
     }
 
@@ -55,7 +78,21 @@ public class Array1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+       
+        
+        //int aPirmais = a[0];
+        //int bPirmais = b[0];
+        //int aPedejais = a[a.Length - 1];
+        //int bPedejais = b[b.Length - 1];
+
+        //return aPedejais == bPedejais || aPirmais == bPirmais;
+
+        // vai iespējams ir šāds vaiants
+
+        return a[0] == b[0] || a[a.Length-1] == b[b.Length-1];
+
+                
+         
     }
 
     /// <summary>
@@ -67,7 +104,22 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int sum = 0; // šis sākumā jāuzstāda lai piešķirtu vērtību
+
+        foreach (var num in nums) // 
+        {
+
+            sum = sum + num; // šo viņš veic vairākos piegājienos līdz beidzāsn num datu masība jeb rindā
+
+            } // tiklīdz beidzās dati iziet un atgriež pedējo summas vērtību
+        
+        return sum;
+        
+        
+        //return nums[0] + nums[1]+ nums [2];
+        
+                
     }
 
     /// <summary>
@@ -80,7 +132,17 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        return new int[] { nums[1], nums[2], nums[0]}; 
+        //return ($"{nums[1]}  {nums[2]}  {nums[0]}");
+
+        // izpildīt šo pašu ar ciklu, ja pēkšņi to ierakstu skaits ir piem. 30 gabali,
+        // ka visi element maina savu atrašanās vietu par vienu par vienu mazāk
+        // katrs cikls parnes elementu -1 
+
+        // bet droši vien atsevisķi jāsaktās uz 0 elementu, jo tas jaaiznest uz otru galu jeb ja
+        // mēs noskaidrojam kāds ir masīva garums nums.Length iegūstam nummuru un to pieķiram 0
+
+
     }
 
     /// <summary>
