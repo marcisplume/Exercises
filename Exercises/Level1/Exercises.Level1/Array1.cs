@@ -155,7 +155,7 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        return new int[] { nums[2], nums[1], nums[0] };
     }
 
     /// <summary>
@@ -168,7 +168,31 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int Lielakais = Math.Max(nums[0], nums[2]);
+
+        return new int[] { Lielakais, Lielakais, Lielakais};
+
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (nums[i] > Lielakais)
+        //    {
+        //        Lielakais = nums[i];
+        //    }
+        //    // jāapskata lielākais vai ir pirmais vai beigās elements
+        //}
+
+        //return new int[] { Lielakais, Lielakais, Lielakais };
+
+        //nums[0], nums[0], nums[0]
+
+        //return (Lielakais + Lielakais + Lielakais);
+
+        //int max = nums.Max();
+
+        //return ($"{lielakavertiba} {lielakavertiba} {lielakavertiba}");
+
+
     }
 
     /// <summary>
@@ -182,7 +206,26 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        int rindasGarums = nums.Length;
+
+        if (rindasGarums == 0)
+        {
+            return 0;
+        }
+
+        if (rindasGarums == 1)
+        {
+            return nums[0];
+
+        }
+        if (rindasGarums > 1)
+        {
+            return nums[0] + nums[1];
+
+        }
+
+        
+        return 0;
     }
 
     /// <summary>
