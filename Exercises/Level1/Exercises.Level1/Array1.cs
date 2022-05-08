@@ -238,7 +238,7 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        return new int [] { a[1], b[1]};
     }
 
     /// <summary>
@@ -251,7 +251,10 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        
+       return new int[] { nums[0], nums[nums.Length-1]};
+        
+        
     }
 
     /// <summary>
@@ -263,7 +266,10 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+        
+        return (nums[0] == 2 || nums[1] == 2 || nums[0] == 3 || nums[1] == 3);
+        
+        
     }
 
     /// <summary>
@@ -275,7 +281,7 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+        return (nums[0] != 2 && nums[0] != 3 && nums[1] != 2 && nums[1] != 3);
     }
 
     /// <summary>
@@ -289,6 +295,16 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
+        int rindasGarums = nums.Length;
+
+        int pedCipPoz = nums.Length - 1;
+
+        int jaunaPedCipPoz = pedCipPoz * 2;
+
+
+        return new int[] { };
+
+
         throw new NotImplementedException();
     }
 
