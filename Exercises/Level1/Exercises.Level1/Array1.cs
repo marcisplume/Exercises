@@ -327,7 +327,7 @@ public class Array1
         //Console.WriteLine($"whileIterator = {whileIteratorv} num ={num}");
         //whileIteratorv++; // Šis nozīme mūžigo ciklu
 
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -340,7 +340,66 @@ public class Array1
     /// </summary>
     public bool Double23(int[] nums)
     {
-        throw new NotImplementedException();
+        int rindasGarums = nums.Length;
+
+        if (rindasGarums < 2)
+            return false;
+
+        if ((nums[0] == 2  && nums[0] == nums[1]) || (nums[0] == 3 && nums[0] == nums[1]))
+        { 
+        return true;
+        }
+
+            // ja a =b =c 
+
+
+
+
+
+        //foreach (int i in nums)
+        //{
+        //    int numberCount = nums[i];
+        //    if (numberCount == 2)
+        //    { 
+        //    return true;
+        //    }
+        //}
+        
+        
+        
+        
+        //// vai datu masīvs satur divus 2  vai divus 3 atgriezt true
+        //// ar ciklu saskaitīt cik ir divnieki un cik trīnieki 
+
+        ////int[] array = { 10, 5, 10, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 12 };
+        //int count = 0;
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    for (int j = i; j < nums.Length - 1; j++)
+        //    {
+
+        //        if (nums[j] == nums[j + 1])
+        //            count = count + 1;
+        //    }
+            
+        //    return (count == 2 && nums [i] ==2);
+            
+        //    //Console.WriteLine("\t\n " + nums[i] + "occurse" + count);
+        //    //Console.ReadKey();
+
+
+        //    return false;
+        //}
+
+
+        // ja divnieku skaits ir == ar 2 vai 3 skaits vienāds ar 2 tad true
+        // int divskaits = 
+        // int trisskaits = 
+
+        // return (divskaits == 2 vai triskaits == 2)
+
+        return false;
+
     }
 
     /// <summary>
@@ -353,6 +412,32 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
+
+
+        //int masivaGarums = nums.Length;
+
+        //int [] jaunsMasivs = new int [masivaGarums];
+
+        if (nums[0] == 2 && nums[1] == 3)
+
+          nums[1] = 0;
+
+        if (nums[1] == 2 && nums[2] == 3)
+            nums[2] = 0;
+
+        return nums;
+
+
+
+        //int[] jaunsMasivs = new int[rindasGarumsReiz2]; // šeit es definēju cik pozīciju kopējo skaitu
+
+        //// izveidoju
+
+        //jaunsMasivs[jaunsMasivs.Length - 1] = nums[rindasGarums - 1];// kreisajā pusē vēršos pie jaunā masīva konkrētās pozicijas  un labajā pusē vecās array konkrētās pozicijas un padaru tās veinādas
+
+
+
+
         throw new NotImplementedException();
     }
 
@@ -366,6 +451,20 @@ public class Array1
     /// </summary>
     public int Start1(int[] a, int[] b)
     {
+
+        if (a.Length > 0 && a[0] == 1 && b.Length > 0 && b[0] == 1)
+            return 2;
+
+        if (a.Length>0 && a[0] == 1)
+            return 1;
+        if ( b.Length > 0 && b[0] == 1)
+            return 1;
+
+
+        return 0;
+
+        
+        
         throw new NotImplementedException();
     }
 
@@ -379,6 +478,16 @@ public class Array1
     /// </summary>
     public int[] BiggerTwo(int[] a, int[] b)
     {
+        
+        int asumma = a[0] + a[1];
+        int bsumma = b[0] + b[1];
+
+        if (bsumma > asumma)
+            return b;
+
+        return a;
+
+
         throw new NotImplementedException();
     }
 
@@ -392,7 +501,15 @@ public class Array1
     /// </summary>
     public int[] MakeMiddle(int[] nums)
     {
-        throw new NotImplementedException();
+
+        //int sakam = nums.Length;
+
+        //int turpinam = sakam / 2;
+
+        //return  nums[nums.Length-turpinam];
+        
+        
+        //throw new NotImplementedException();
     }
 
     /// <summary>
