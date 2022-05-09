@@ -813,6 +813,27 @@ public class Warmup1
     {
         int vGarums = str.Length;
 
+        char[] Burti = new char[vGarums];
+
+        for (int i = 0; i < vGarums; i++)
+        {
+            Burti [i] = str[i];
+        }
+
+        int burtuDaudzums = Burti.Length;
+
+        for (int j = 0; j < burtuDaudzums; j++)
+
+        //{ 
+        // if ((j%3)== 0 )
+        //    {
+        //        Burti(Burti[j]);
+        //    }
+
+        //}
+
+
+
         if (vGarums == 0)
             return str;
 
@@ -826,30 +847,35 @@ public class Warmup1
 
 // ja ir tukšuma zīme tad beigt
 
-        int Pirmapoz = 0;
-        int Otrapoz = Pirmapoz + n;
-        int Tresapoz = Otrapoz + n;
-        int Ceturtpoz = Tresapoz + n;
-        int Piektpoz =  Ceturtpoz + n;
 
-        int Vardagarums = str.Length;
+        
 
-        int cikSaiet = Vardagarums % n;
-        int pareizVardagarums = Vardagarums - cikSaiet;
 
-        int cikTaluIet = pareizVardagarums / n;
 
-        if (cikTaluIet == 2 )
-            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1);
+        //int Pirmapoz = 0;
+        //int Otrapoz = Pirmapoz + n;
+        //int Tresapoz = Otrapoz + n;
+        //int Ceturtpoz = Tresapoz + n;
+        //int Piektpoz =  Ceturtpoz + n;
 
-        if (cikTaluIet == 3 )
-            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
+        //int Vardagarums = str.Length;
 
-        if (cikTaluIet == 4)
-            return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1) + str.Substring(Piektpoz, 1);
+        //int cikSaiet = Vardagarums % n;
+        //int pareizVardagarums = Vardagarums - cikSaiet;
 
-        if (cikTaluIet <= 1)
-            return str.Substring(Pirmapoz, 1);
+        //int cikTaluIet = pareizVardagarums / n;
+
+        //if (cikTaluIet == 2 )
+        //    return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1);
+
+        //if (cikTaluIet == 3 )
+        //    return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
+
+        //if (cikTaluIet == 4)
+        //    return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1) + str.Substring(Piektpoz, 1);
+
+        //if (cikTaluIet <= 1)
+        //    return str.Substring(Pirmapoz, 1);
 
         //if (n > 0)
         //    Vardagarums = Vardagarums - cikSaiet;
