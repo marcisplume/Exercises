@@ -507,9 +507,9 @@ public class Array1
         //int turpinam = sakam / 2;
 
         //return  nums[nums.Length-turpinam];
-        
-        
-        //throw new NotImplementedException();
+
+
+        throw new NotImplementedException();
     }
 
     /// <summary>
