@@ -297,13 +297,35 @@ public class Array1
     {
         int rindasGarums = nums.Length;
 
+        int rindasGarumsReiz2 = rindasGarums * 2;
+
         int pedCipPoz = nums.Length - 1;
 
         int jaunaPedCipPoz = pedCipPoz * 2;
 
+        int[] jaunsMasivs= new int [rindasGarumsReiz2]; // šeit es definēju cik pozīciju kopējo skaitu
 
-        return new int[] { };
+       // izveidoju
 
+        jaunsMasivs[jaunsMasivs.Length-1] = nums[rindasGarums - 1];// kreisajā pusē vēršos pie jaunā masīva konkrētās pozicijas  un labajā pusē vecās array konkrētās pozicijas un padaru tās veinādas
+
+        return jaunsMasivs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //int num = nums[whileIteratorv];
+        //Console.WriteLine($"whileIterator = {whileIteratorv} num ={num}");
+        //whileIteratorv++; // Šis nozīme mūžigo ciklu
 
         throw new NotImplementedException();
     }
