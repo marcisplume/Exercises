@@ -301,7 +301,7 @@ public class Array1
 
         int pedCipPoz = nums.Length - 1;
 
-        int jaunaPedCipPoz = pedCipPoz * 2;
+        //int jaunaPedCipPoz = pedCipPoz * 2;
 
         int[] jaunsMasivs= new int [rindasGarumsReiz2]; // šeit es definēju cik pozīciju kopējo skaitu
 
@@ -438,7 +438,7 @@ public class Array1
 
 
 
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -488,7 +488,7 @@ public class Array1
         return a;
 
 
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -502,11 +502,37 @@ public class Array1
     public int[] MakeMiddle(int[] nums)
     {
 
+        int [] a = new int[2];
+        a[0] = nums[0];
+        a[1] = nums[1];
+        
+
+
+
+
+
+        //a [0] = nums[nums.Length/2];
+        //a [1] = nums[nums.Length/2 +1];
+
+        return a;
+
+        // = 
+
+
+        //int[] jaunsMasivs = new int[rindasGarumsReiz2]; // šeit es definēju cik pozīciju kopējo skaitu
+
+        //// izveidoju
+
+        //jaunsMasivs[jaunsMasivs.Length - 1] = nums[rindasGarums - 1];// kreisajā pusē vēršos pie jaunā masīva konkrētās pozicijas  un labajā pusē vecās array konkrētās pozicijas un padaru tās veinādas
+
+        //return jaunsMasivs;
+
+
         //int sakam = nums.Length;
 
         //int turpinam = sakam / 2;
 
-        //return  nums[nums.Length-turpinam];
+        //return  nums[nums.Length/-turpinam];
 
 
         throw new NotImplementedException();

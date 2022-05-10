@@ -812,17 +812,36 @@ public class Warmup1
     public string EveryNth(string str, int n)
     {
         int vGarums = str.Length;
+             
 
-        char[] Burti = new char[vGarums];
+        string galaStr = "";
 
-        for (int i = 0; i < vGarums; i++)
+        for (int i = 0; i < vGarums; i=n+i)
         {
-            Burti [i] = str[i];
+            galaStr += str.Substring(i, 1);
+            // vai galaStr = galaStr + str.Substring(i, 1);
         }
 
-        int burtuDaudzums = Burti.Length;
+        return galaStr;
+        
 
-        for (int j = 0; j < burtuDaudzums; j++)
+
+
+
+
+
+        //char[] Burti = new char[vGarums];
+
+
+        //gala = str.Substring(str[i], n);
+
+        //Burti[i] = str[i];
+
+        //int burtuDaudzums = Burti.Length;
+
+
+
+        //for (int j = 0; j < burtuDaudzums; j+n)
 
         //{ 
         // if ((j%3)== 0 )
@@ -834,21 +853,21 @@ public class Warmup1
 
 
 
-        if (vGarums == 0)
-            return str;
+        //if (vGarums == 0)
+        //    return str;
 
-// nepieciešams saprats garumu
-// saprast kad pārtraukt pievienot +2 vai +3
-// paņemt 0 pozīcijā 1 zīmi 2 pozicijā 1 zīmi
+        // nepieciešams saprats garumu
+        // saprast kad pārtraukt pievienot +2 vai +3
+        // paņemt 0 pozīcijā 1 zīmi 2 pozicijā 1 zīmi
 
         // a kas ja mēs sākt no beigām
 
         // Var atrast Char vai izdzēst liekos.
 
-// ja ir tukšuma zīme tad beigt
+        // ja ir tukšuma zīme tad beigt
 
 
-        
+
 
 
 
@@ -883,10 +902,10 @@ public class Warmup1
 
 
 
-            //return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
+        //return str.Substring(Pirmapoz, 1) + str.Substring(Otrapoz, 1) + str.Substring(Tresapoz, 1) + str.Substring(Ceturtpoz, 1);
 
 
-            //return str.Substring(0, 1) + str.Substring(2, 1) + str.Substring(4, 1) + str.Substring(6, 1);
+        //return str.Substring(0, 1) + str.Substring(2, 1) + str.Substring(4, 1) + str.Substring(6, 1);
 
         throw new NotImplementedException();
     }
