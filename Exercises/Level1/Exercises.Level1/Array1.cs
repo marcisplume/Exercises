@@ -625,6 +625,76 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
+       
+        
+        bool vaiParaSkaitlis = nums.Length % 2 == 0;
+
+
+        int pirmais = nums[0];
+        int pedejais = nums[nums.Length-1];
+        int videjaisnepara  = nums[nums.Length /2 +1];
+        int videjaisPara = nums[nums.Length/2];
+
+        int[] a = new int[3];
+
+
+        //if (vaiParaSkaitlis)
+        //{
+            a[0] = pedejais;
+            a[1] = videjaisPara;
+            a[2] = pedejais;
+
+            //a [] = { pirmais, pedejais, videjais };
+            //int lielakais = nums[0];
+
+
+            for (int i = 0; i < a.Length; i++) // vajag 
+            {
+                if (a[i] > a[1])
+                    a[0] = a[i];
+
+            }
+
+            return a[0];
+
+        //foreach (var a in a)
+        //{
+        //    if (a[i] > a[1])
+        //        a[0] = a[i];
+        //}
+
+
+        //}
+
+        //if(vaiParaSkaitlis)
+        // {
+        //    a[0] = pedejais;
+        //    a[1] = videjaisPara;
+        //    a[2] = pedejais;
+
+        //    for (int i = 0; i < a.Length; i++) 
+        //    {
+        //        if (a[i] > a[0])
+        //            a[0] = a[i];
+
+        //    }
+
+        //    return a[0];
+
+        //}
+
+
+
+
+
+        //    string galaStr = "";
+
+        //for (int i = 0; i < vGarums; i = n + i)
+        //    {
+        //        galaStr += str.Substring(i, 1);
+        //        // vai galaStr = galaStr + str.Substring(i, 1);
+
+
         throw new NotImplementedException();
     }
 
