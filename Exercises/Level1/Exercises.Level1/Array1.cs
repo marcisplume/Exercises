@@ -502,19 +502,17 @@ public class Array1
     public int[] MakeMiddle(int[] nums)
     {
 
-        int [] a = new int[2];
-        a[0] = nums[0];
-        a[1] = nums[1];
+        int videjaisIndeks = nums.Length / 2;
+
+        int videjaisIndeks2 = videjaisIndeks - 1;
+
         
-
-
-
-
-
-        //a [0] = nums[nums.Length/2];
-        //a [1] = nums[nums.Length/2 +1];
-
-        return a;
+        int [] a = new int[2];
+        a[1] = nums[videjaisIndeks];
+        a[0] = nums[videjaisIndeks2];
+        
+       
+                return a;
 
         // = 
 
@@ -548,6 +546,15 @@ public class Array1
     /// </summary>
     public int[] PlusTwo(int[] a, int[] b)
     {
+        int[] c = new int[4];
+        c[0] = a[0];
+        c[1] = a[1];
+        c[2] = b[0];
+        c[3] = b[1];
+
+
+        return c;
+
         throw new NotImplementedException();
     }
 
@@ -561,6 +568,18 @@ public class Array1
     /// </summary>
     public int[] SwapEnds(int[] nums)
     {
+
+        int pirmaVieta = nums[0];
+
+        int pedejaVieta = nums[nums.Length-1];
+        
+        if (nums.Length > 0 )
+        {
+            nums[0] = pedejaVieta;
+            nums[nums.Length-1] = pirmaVieta;
+            return nums;
+        }
+        
         throw new NotImplementedException();
     }
 
@@ -574,6 +593,25 @@ public class Array1
     /// </summary>
     public int[] MidThree(int[] nums)
     {
+
+        int videjaisIndeks = nums.Length / 2;
+
+        int sPalabi = videjaisIndeks +1;
+
+        int paKreisi  = videjaisIndeks -1;
+
+
+        int[] a = new int[3];
+        a[0] = nums[paKreisi];
+        a[1] = nums[videjaisIndeks];
+        a[2] = nums[sPalabi];
+
+
+        return a;
+
+
+
+
         throw new NotImplementedException();
     }
 
