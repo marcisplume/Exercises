@@ -334,7 +334,7 @@ public class Array1Tests
     [InlineData(false, new[] { 1, 4 })]
     [InlineData(false, new[] { 1 })]
     [InlineData(false, new int[] { })]
-    [InlineData(false, new[] { 1, 1, 1, 3, 1, 1 })]
+    [InlineData(true, new[] { 1, 1, 1, 3, 1, 1 })]
     [InlineData(true, new[] { 1, 1, 1, 1, 3, 1 })]
     [InlineData(true, new[] { 1, 1, 3, 1, 1 })]
     [InlineData(true, new[] { 1, 1, 1, 1, 3 })]
