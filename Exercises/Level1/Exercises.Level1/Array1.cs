@@ -625,37 +625,103 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
-       
-        
-        bool vaiParaSkaitlis = nums.Length % 2 == 0;
 
+        //int pirmais = nums[0];
+        //int pedejais = nums.Length - 1;
+        //int videjaisNEPara = nums.Length / 2;
+
+        //int[] a = new int[4];
+        //a[0] = pirmais;
+        //a[1] = videjaisNEPara;
+        //a[2] = pedejais;
+
+        //for (int i = 0; i < a.Length; i++)
+        //{
+        //    if (a[1] > a[0])
+        //    {
+        //        a[0] = a[1];
+        //    }
+        //}
 
         int pirmais = nums[0];
-        int pedejais = nums[nums.Length-1];
-        int videjaisnepara  = nums[nums.Length /2 +1];
-        int videjaisPara = nums[nums.Length/2];
+        int pedejais = nums[nums.Length - 1];
+        int videjaisNEPara = nums[nums.Length / 2];
+        int lielakais = nums[0];
+
 
         int[] a = new int[3];
+        a[0] = pirmais;
+        a[1] = videjaisNEPara;
+        a[2] = pedejais;
 
+        Console.WriteLine(a[0]);
+        Console.WriteLine(a[1]);
+        Console.WriteLine(a[2]);
 
-        //if (vaiParaSkaitlis)
-        //{
-            a[0] = pedejais;
-            a[1] = videjaisPara;
-            a[2] = pedejais;
-
-            //a [] = { pirmais, pedejais, videjais };
-            //int lielakais = nums[0];
-
-
-            for (int i = 0; i < a.Length; i++) // vajag 
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] > a[0])
             {
-                if (a[i] > a[1])
-                    a[0] = a[i];
-
+                a[0] = a[i];
             }
+        }
 
-            return a[0];
+
+        return a[0];
+
+
+
+
+        //    a[0] = pedejais;
+        //    a[1] = videjaisnepara;
+        //    a[2] = pedejais;
+        //bool vaiParaSkaitlis = nums.Length % 2 == 0;
+
+
+        //int pirmais = nums[0];
+        //int pedejais = nums[nums.Length-1];
+        //int videjaisnepara  = nums[nums.Length /2+1];
+        //int videjaisPara = nums[nums.Length/2];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ////if (vaiParaSkaitlis)
+        ////{
+        //    a[0] = pedejais;
+        //    a[1] = videjaisnepara;
+        //    a[2] = pedejais;
+
+        //    //a [] = { pirmais, pedejais, videjais };
+        //    //int lielakais = nums[0];
+
+
+        //    for (int i = 0; i < a.Length; i++) // vajag 
+        //    {
+        //        if (a[i] > a[1])
+        //            a[0] = a[i];
+
+        //    }
+
+        //    return a[0];
 
         //foreach (var a in a)
         //{
