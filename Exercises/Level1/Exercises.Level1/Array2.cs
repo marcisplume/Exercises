@@ -17,7 +17,18 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+        int count = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] % 2 == 0)
+            {
+                count++;
+            }
+        }
+         
+        return count;
+        
+        
     }
 
     /// <summary>
@@ -31,7 +42,29 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        int[] maxmin = new int[2];
+        maxmin[0] = 1;
+        maxmin[1] = 100;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            
+            if(nums[i] > maxmin[0])
+            {
+                maxmin[0] = nums[i];
+            }
+        }
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] < maxmin[1])
+            {
+                maxmin[1] = nums[i];
+            }
+        }
+              
+        int starpiba = maxmin[0] - maxmin[1];
+        return starpiba;
+        
     }
 
     /// <summary>
