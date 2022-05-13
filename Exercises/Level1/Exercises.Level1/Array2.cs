@@ -42,30 +42,35 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-       
-        int[] maxmin = new int[2];
-        maxmin[0] = 1;
-        maxmin[1] = 100;
-        for (int i = 0; i < nums.Length; i++)
+
+        int max = int.MinValue;
+        int min = int.MaxValue;
+
+
+        foreach (int num in nums)
         {
-            
-            if(nums[i] > maxmin[0])
-            {
-                maxmin[0] = nums[i];
-            }
+            min = Math.Min(num, min);
+            max = Math.Max(num, max);
         }
-        for (int i = 0; i < nums.Length; i++)
-        {
-            if (nums[i] < maxmin[1])
-            {
-                maxmin[1] = nums[i];
-            }
-        }
-              
-        int starpiba = maxmin[0] - maxmin[1];
-        return starpiba;
+                    
+        return max - min;
         
     }
+
+    //for (int i = 0; i < nums.Length; i++)
+    //if(nums[i] > max)
+    //{
+    //    max = nums[i];
+    //}
+
+    //if (nums[i] < min)
+    //{
+    //    min = nums[i];
+    //}
+
+
+
+
 
     /// <summary>
     /// Return the "centered" average of an array of ints, which we'll say is the mean average of
