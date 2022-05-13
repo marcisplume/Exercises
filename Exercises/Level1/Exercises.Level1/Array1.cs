@@ -724,7 +724,22 @@ public class Array1
     /// </summary>
     public int[] Make2(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+       
+        int [] c = new int[a.Length + b.Length];
+
+             
+        a.CopyTo(c, 0);
+        b.CopyTo(c, a.Length);
+
+        int[] d = new int[2];
+
+        d[0] = c[0];
+        d[1] = c[1];
+
+        return d;
+
+
+        
     }
 
     /// <summary>
