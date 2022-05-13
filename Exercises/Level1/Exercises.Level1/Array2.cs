@@ -85,6 +85,25 @@ public class Array2
     /// </summary>
     public int CenteredAverage(int[] nums)
     {
+        int max = int.MinValue;
+        int min = int.MaxValue;
+        int sum = 0;
+        int garums = nums.Length;
+
+        foreach (int num in nums)
+        {
+            min = Math.Min(num, min);
+            max = Math.Max(num, max);
+            sum = num + sum;
+        }
+
+        int augsa = sum - max - min;
+        int apaksa = garums - 2; 
+
+        return augsa/apaksa;
+
+       
+
         throw new NotImplementedException();
     }
 
@@ -99,7 +118,26 @@ public class Array2
     /// </summary>
     public int Sum13(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int summa   = 0;
+        int max = int.MaxValue;
+        int min = int.MinValue;
+        
+        for (int i = 0; i < nums.Length; i++)
+
+            if (nums[i] %13 ==0)
+            {
+               i++;
+            }
+        
+            else if (nums[i]% 13 !=0)
+        {
+                summa = summa + nums[i];
+        }
+        
+        return summa;
+
+        
     }
 
     /// <summary>
@@ -113,6 +151,32 @@ public class Array2
     /// </summary>
     public int Sum67(int[] nums)
     {
+        int sum = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+
+            if (nums[i] != 6)
+
+            {
+                sum = sum + nums[i];
+            }
+
+
+       else if (nums[i] == 6)
+            do
+            {
+                           
+                i++;
+            }
+            while (i == 7);
+
+
+        return sum;
+
+
+
+
+
         throw new NotImplementedException();
     }
 
