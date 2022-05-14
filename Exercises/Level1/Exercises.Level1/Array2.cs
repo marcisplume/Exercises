@@ -151,33 +151,29 @@ public class Array2
     /// </summary>
     public int Sum67(int[] nums)
     {
+
+
         int sum = 0;
+        bool pieskaitam = true;
 
         for (int i = 0; i < nums.Length; i++)
+        {
 
-            if (nums[i] != 6)
+            if (nums[i] != 6 && pieskaitam == true)
 
-            {
                 sum = sum + nums[i];
-            }
 
+            else if (nums[i] == 6)
 
-       else if (nums[i] == 6)
-            do
-            {
-                           
-                i++;
-            }
-            while (i == 7);
+                pieskaitam = false;
+            else if (nums[i] == 7)
+                pieskaitam = true;
+
+        }
 
 
         return sum;
 
-
-
-
-
-        throw new NotImplementedException();
     }
 
     /// <summary>
