@@ -185,6 +185,60 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
+        
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2 && nums[i] == nums[i + 1])
+            {
+                return true;
+            }
+            continue;
+
+            if (nums[i] != 2 && nums[i] != nums[i + 1])
+            { return false;}
+
+        }
+
+        return false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //foreach (int num in nums)
+
+        //{
+        //    if (num == 2 && num + 1 == 2)
+        //    { return true; }
+        //}
+
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (nums[i] == nums[i + 1] && nums[i] == 2)
+
+        //    {
+        //        return true;
+        //    }
+        //    else if ()
+
+        //}
+
+        //return false;
+
+
+
+
+
         throw new NotImplementedException();
     }
 
