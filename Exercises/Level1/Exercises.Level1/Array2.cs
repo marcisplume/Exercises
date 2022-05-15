@@ -187,17 +187,13 @@ public class Array2
     {
         
 
-        for (int i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length-1; i++)
         {
             if (nums[i] == 2 && nums[i] == nums[i + 1])
             {
                 return true;
             }
-            continue;
-
-            if (nums[i] != 2 && nums[i] != nums[i + 1])
-            { return false;}
-
+            
         }
 
         return false;
