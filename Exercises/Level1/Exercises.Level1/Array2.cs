@@ -264,46 +264,34 @@ public class Array2
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] == 1 || nums[i] == 4)
+           
+            if (nums[i] == 1)
             {
-
-                if (nums[i] == 1)
-                    sumofOnes = sumofOnes + 1;
-
-                else if (nums[i]==4)
-                    sumOfFores = sumOfFores + 1;
-
-               if (sumofOnes == sumOfFores)
-                { return false; }
-                
-                if (sumofOnes > sumOfFores)
-                { return true; }
-
-
+                sumofOnes++;
+            }
+            else if (nums[i] == 4)
+            {
+                sumOfFores ++;
             }
 
             
-
-            if (sumofOnes % 1 > sumOfFores % 4)
-            { return true; }
-
         }
 
+        if (sumofOnes == sumOfFores)
+        {
+            return false;
+        }
 
-
-
-
-
+        if (sumofOnes > sumOfFores)
+        {
+            return true;
+        }
 
 
         return false;
 
 
-
-
-
-
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -318,6 +306,18 @@ public class Array2
     /// </summary>
     public int[] FizzArray(int n)
     {
+        
+        int[] array = new int[n];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = i;
+        }
+        return array;
+
+        
+
+
         throw new NotImplementedException();
     }
 
@@ -330,7 +330,19 @@ public class Array2
     /// </summary>
     public bool Only14(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        for (int i =0; i< nums.Length; i++)
+
+            if (nums[i] == 1 || nums[i]==4)
+            {
+                return false;
+            }
+            else
+            { return true; }
+        
+        
+        
+        return true;
     }
 
     /// <summary>
