@@ -233,7 +233,21 @@ public class Array2
     /// </summary>
     public bool Sum28(int[] nums)
     {
-        throw new NotImplementedException();
+       int sum = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] ==2)
+            {
+                sum= sum + nums[i];
+                
+            }
+            
+        }
+        if (sum == 8)
+            return true;
+        return false;
+        
     }
 
     /// <summary>
@@ -245,6 +259,50 @@ public class Array2
     /// </summary>
     public bool More14(int[] nums)
     {
+        int sumofOnes = 0;
+        int sumOfFores = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 1 || nums[i] == 4)
+            {
+
+                if (nums[i] == 1)
+                    sumofOnes = sumofOnes + 1;
+
+                else if (nums[i]==4)
+                    sumOfFores = sumOfFores + 1;
+
+               if (sumofOnes == sumOfFores)
+                { return false; }
+                
+                if (sumofOnes > sumOfFores)
+                { return true; }
+
+
+            }
+
+            
+
+            if (sumofOnes % 1 > sumOfFores % 4)
+            { return true; }
+
+        }
+
+
+
+
+
+
+
+
+        return false;
+
+
+
+
+
+
         throw new NotImplementedException();
     }
 
