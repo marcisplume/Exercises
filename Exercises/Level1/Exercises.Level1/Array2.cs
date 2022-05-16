@@ -199,43 +199,6 @@ public class Array2
         return false;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-        //foreach (int num in nums)
-
-        //{
-        //    if (num == 2 && num + 1 == 2)
-        //    { return true; }
-        //}
-
-        //for (int i = 0; i < nums.Length; i++)
-        //{
-        //    if (nums[i] == nums[i + 1] && nums[i] == 2)
-
-        //    {
-        //        return true;
-        //    }
-        //    else if ()
-
-        //}
-
-        //return false;
-
-
-
-
-
-        throw new NotImplementedException();
     }
 
     /// <summary>
@@ -247,7 +210,18 @@ public class Array2
     /// </summary>
     public bool Lucky13(int[] nums)
     {
-        throw new NotImplementedException();
+
+      
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 3 || nums[i] == 1)
+            {
+                return false;
+
+            }
+         }
+        return true;
     }
 
     /// <summary>
