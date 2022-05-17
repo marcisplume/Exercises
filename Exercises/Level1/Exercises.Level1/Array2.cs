@@ -372,7 +372,24 @@ public class Array2
     /// </summary>
     public string[] FizzArray2(int nums)
     {
-        throw new NotImplementedException();
+
+
+        int[] array = new int[nums];
+        string[] array2 = new string[nums];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = i;
+        }
+
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            array2[i] = array[i].ToString();
+        }
+
+        return array2;
+
     }
 
     /// <summary>
