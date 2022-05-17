@@ -401,8 +401,34 @@ public class Array2
     /// </summary>
     public bool No14(int[] nums)
     {
-        throw new NotImplementedException();
+        bool vaisatur1 = false;
+        bool vaisatur4 = false;
+
+
+        for (int i = 0; i < nums.Length; i++)
+            if (nums[i]==1)
+            { vaisatur1 = true; }
+
+        for (int i = 0; i < nums.Length; i++)
+            if (nums[i]==4)
+                { vaisatur4 = true; }
+
+        if ((vaisatur1 && !vaisatur4) || (!vaisatur1 && vaisatur4))
+        {
+            return true;
+        }
+        
+         if (vaisatur1 && vaisatur4)
+        {
+            return false;
+        }
+
+
+        return true;
     }
+
+
+    //nums[i] ==1 && nums[i] != 4) || (nums[i]!=1 && nums[i] ==4) ||
 
     /// <summary>
     /// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in
