@@ -330,18 +330,34 @@ public class Array2
     /// </summary>
     public bool Only14(int[] nums)
     {
-       
-        for (int i =0; i< nums.Length; i++)
 
-            if (nums[i] == 1 || nums[i]==4)
+        //foreach (int num in nums)
+        //{
+        //    if (num < 1 || num > 1 || num < 4 || num > 4)
+        //    {
+        //        return false;
+
+
+        //    }
+        //    //else return true;
+        //}
+
+        //foreach (int num in nums)
+        //{
+        //    if (num != 1 && num != 4)
+        //    {
+        //        return false;
+        //    }
+        //    else return true;
+        //}
+
+        for (int i = 0; i < nums.Length; i++)
+
+            if (nums[i] != 1 && nums[i] != 4)
             {
                 return false;
             }
-            else
-            { return true; }
-        
-        
-        
+         
         return true;
     }
 
