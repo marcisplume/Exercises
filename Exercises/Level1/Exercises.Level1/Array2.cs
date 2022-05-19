@@ -479,7 +479,41 @@ public class Array2
     /// </summary>
     public bool Either24(int[] nums)
     {
-        throw new NotImplementedException();
+
+        bool vaiIr22 = false;
+        bool vaiir44 = false;
+        
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+            
+            if (nums[i]==2 && nums[i+1]==2)
+            {
+                vaiIr22 = true;
+                
+            }
+            if (nums[i] == 4 && nums[i + 1] == 4)
+            {
+                vaiir44 = true;
+                
+            }
+
+
+        }
+
+        if (vaiIr22 && vaiir44)
+        {
+            return false;
+        }
+
+        if (vaiIr22 || vaiir44)
+        {
+            return true;
+        }
+
+
+        return false;
+        
+        
     }
 
     /// <summary>
@@ -493,7 +527,28 @@ public class Array2
     /// </summary>
     public int MatchUp(int[] nums1, int[] nums2)
     {
-        throw new NotImplementedException();
+
+        int sum = 0;
+
+        for (int i = 0; i < nums1.Length; i++)
+
+        {
+            if(nums1[i] == nums2[i])
+            {
+                continue;
+                   
+            }
+
+            if (Math.Abs(nums1[i] - nums2[i]) <= 2)
+            {
+                sum++;
+            }
+
+        }
+        return sum;
+
+
+           
     }
 
     /// <summary>
@@ -506,7 +561,22 @@ public class Array2
     /// </summary>
     public bool Has77(int[] nums)
     {
-        throw new NotImplementedException();
+
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+            if (nums[i] == nums[i+1] && nums[i] == 7)
+            {
+                return true;
+            }
+        }
+
+        for (int i = 0; i < nums.Length - 2; i++)
+            if (nums[i] == nums[i + 2] && nums[i] == 7)
+            {
+                return true;
+            }
+
+        return false;
     }
 
     /// <summary>
@@ -519,6 +589,11 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
+        
+        
+        
+        
+        
         throw new NotImplementedException();
     }
 
