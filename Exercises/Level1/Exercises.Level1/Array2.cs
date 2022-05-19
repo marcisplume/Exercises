@@ -589,12 +589,31 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
+      
+        for (int i = 0; i < nums.Length-1; i++)
+
+        {
+            if (nums[i]==1)
+                
+            {
+
+                for (int j = i+1; j < nums.Length; j++)
+                {
+                    if (nums[j]==2)
+                    {
+                        return true;
+                    }
+                }
+
+             }
+          
+            
+        }
         
+
+            return false;
+
         
-        
-        
-        
-        throw new NotImplementedException();
     }
 
     /// <summary>
@@ -607,7 +626,23 @@ public class Array2
     /// </summary>
     public bool ModThree(int[] nums)
     {
-        throw new NotImplementedException();
+        
+
+            for (int i = 0; i<nums.Length-2; i++)
+            {
+            if (nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0)
+                    {
+                return true;
+            }
+            }
+        for (int i = 0; i < nums.Length - 2; i++)
+        {
+            if (nums[i] % 2 == 1 && nums[i + 1] % 2 == 1 && nums[i + 2] % 2 == 1)
+            {
+                return true;
+            }
+        }
+        return false; 
     }
 
     /// <summary>
@@ -620,7 +655,33 @@ public class Array2
     /// </summary>
     public bool HaveThree(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int trisskaits = 0;
+        bool irblakus = false;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i]==3)
+            {
+                trisskaits++;
+            }
+        }
+
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+            if (nums[i]==3 && nums[i+1]==3)
+            {
+                irblakus = true;
+            }
+        }
+
+        if (trisskaits == 3 && !irblakus)
+        {
+                return true;
+        }
+       
+        return false;
+        
     }
 
     /// <summary>
