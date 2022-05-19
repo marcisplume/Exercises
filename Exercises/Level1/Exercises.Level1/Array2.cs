@@ -693,7 +693,42 @@ public class Array2
     /// </summary>
     public bool TwoTwo(int[] nums)
     {
-        throw new NotImplementedException();
+
+
+        for (int i = 0; i < nums.Length - 1; i++)
+
+        {
+            if (nums[i] == 2 && nums[i+1] ==2)
+
+            {
+
+                for (int j = i + 2; j < nums.Length; j++)
+                {
+                    if (nums[j] == 2 && nums[j + 1] != 2)
+                    {
+                        return false;
+                    }
+
+                    else return true;
+                }
+
+
+
+            }
+
+
+        }
+
+        // if(nums[i] == 2 && nums[i+1]==2
+        // atgriezt pateisību ja 2 cikls izpēta tālāk un tur ir 2  kuram blakus nav 2
+
+
+
+
+
+
+
+        return false;
     }
 
     /// <summary>
