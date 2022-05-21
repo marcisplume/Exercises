@@ -25,10 +25,10 @@ public class Array2
                 count++;
             }
         }
-         
+
         return count;
-        
-        
+
+
     }
 
     /// <summary>
@@ -52,9 +52,9 @@ public class Array2
             min = Math.Min(num, min);
             max = Math.Max(num, max);
         }
-                    
+
         return max - min;
-        
+
     }
 
     //for (int i = 0; i < nums.Length; i++)
@@ -98,11 +98,11 @@ public class Array2
         }
 
         int augsa = sum - max - min;
-        int apaksa = garums - 2; 
+        int apaksa = garums - 2;
 
-        return augsa/apaksa;
+        return augsa / apaksa;
 
-       
+
 
         throw new NotImplementedException();
     }
@@ -119,25 +119,25 @@ public class Array2
     public int Sum13(int[] nums)
     {
 
-        int summa   = 0;
+        int summa = 0;
         int max = int.MaxValue;
         int min = int.MinValue;
-        
+
         for (int i = 0; i < nums.Length; i++)
 
-            if (nums[i] %13 ==0)
+            if (nums[i] % 13 == 0)
             {
-               i++;
+                i++;
             }
-        
-            else if (nums[i]% 13 !=0)
-        {
+
+            else if (nums[i] % 13 != 0)
+            {
                 summa = summa + nums[i];
-        }
-        
+            }
+
         return summa;
 
-        
+
     }
 
     /// <summary>
@@ -185,15 +185,15 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
-        
 
-        for (int i = 0; i < nums.Length-1; i++)
+
+        for (int i = 0; i < nums.Length - 1; i++)
         {
             if (nums[i] == 2 && nums[i] == nums[i + 1])
             {
                 return true;
             }
-            
+
         }
 
         return false;
@@ -211,7 +211,7 @@ public class Array2
     public bool Lucky13(int[] nums)
     {
 
-      
+
 
         for (int i = 0; i < nums.Length; i++)
         {
@@ -220,7 +220,7 @@ public class Array2
                 return false;
 
             }
-         }
+        }
         return true;
     }
 
@@ -233,21 +233,21 @@ public class Array2
     /// </summary>
     public bool Sum28(int[] nums)
     {
-       int sum = 0;
+        int sum = 0;
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] ==2)
+            if (nums[i] == 2)
             {
-                sum= sum + nums[i];
-                
+                sum = sum + nums[i];
+
             }
-            
+
         }
         if (sum == 8)
             return true;
         return false;
-        
+
     }
 
     /// <summary>
@@ -264,17 +264,17 @@ public class Array2
 
         for (int i = 0; i < nums.Length; i++)
         {
-           
+
             if (nums[i] == 1)
             {
                 sumofOnes++;
             }
             else if (nums[i] == 4)
             {
-                sumOfFores ++;
+                sumOfFores++;
             }
 
-            
+
         }
 
         if (sumofOnes == sumOfFores)
@@ -291,7 +291,7 @@ public class Array2
         return false;
 
 
-        
+
     }
 
     /// <summary>
@@ -306,7 +306,7 @@ public class Array2
     /// </summary>
     public int[] FizzArray(int n)
     {
-        
+
         int[] array = new int[n];
 
         for (int i = 0; i < array.Length; i++)
@@ -315,7 +315,7 @@ public class Array2
         }
         return array;
 
-        
+
 
 
         throw new NotImplementedException();
@@ -357,7 +357,7 @@ public class Array2
             {
                 return false;
             }
-         
+
         return true;
     }
 
@@ -420,7 +420,7 @@ public class Array2
             { vaisatur4 = true; }
 
         }
-        
+
         if ((vaisatur1 && !vaisatur4) || (!vaisatur1 && vaisatur4))
         {
             return true;
@@ -436,7 +436,7 @@ public class Array2
     }
 
 
-    
+
 
     /// <summary>
     /// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in
@@ -450,11 +450,11 @@ public class Array2
     public bool IsEverywhere(int[] nums, int val)
     {
         if (nums.Length <= 1)
-            {
+        {
             return true;
         }
-        
-        for (int i = 0; i<nums.Length-1; i++)
+
+        for (int i = 0; i < nums.Length - 1; i++)
         {
             if (nums[i] != val && nums[i + 1] != val)
                 return false;
@@ -464,7 +464,7 @@ public class Array2
         //if (nums[i] == val || nums[i + 1] == val) // nav pareizs
         //    return true;
 
-        
+
 
         return true;
     }
@@ -482,19 +482,19 @@ public class Array2
 
         bool vaiIr22 = false;
         bool vaiir44 = false;
-        
-        for (int i = 0; i < nums.Length-1; i++)
+
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            
-            if (nums[i]==2 && nums[i+1]==2)
+
+            if (nums[i] == 2 && nums[i + 1] == 2)
             {
                 vaiIr22 = true;
-                
+
             }
             if (nums[i] == 4 && nums[i + 1] == 4)
             {
                 vaiir44 = true;
-                
+
             }
 
 
@@ -512,8 +512,8 @@ public class Array2
 
 
         return false;
-        
-        
+
+
     }
 
     /// <summary>
@@ -533,10 +533,10 @@ public class Array2
         for (int i = 0; i < nums1.Length; i++)
 
         {
-            if(nums1[i] == nums2[i])
+            if (nums1[i] == nums2[i])
             {
                 continue;
-                   
+
             }
 
             if (Math.Abs(nums1[i] - nums2[i]) <= 2)
@@ -548,7 +548,7 @@ public class Array2
         return sum;
 
 
-           
+
     }
 
     /// <summary>
@@ -562,9 +562,9 @@ public class Array2
     public bool Has77(int[] nums)
     {
 
-        for (int i = 0; i < nums.Length-1; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            if (nums[i] == nums[i+1] && nums[i] == 7)
+            if (nums[i] == nums[i + 1] && nums[i] == 7)
             {
                 return true;
             }
@@ -589,31 +589,31 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
-      
-        for (int i = 0; i < nums.Length-1; i++)
+
+        for (int i = 0; i < nums.Length - 1; i++)
 
         {
-            if (nums[i]==1)
-                
+            if (nums[i] == 1)
+
             {
 
-                for (int j = i+1; j < nums.Length; j++)
+                for (int j = i + 1; j < nums.Length; j++)
                 {
-                    if (nums[j]==2)
+                    if (nums[j] == 2)
                     {
                         return true;
                     }
                 }
 
-             }
-          
-            
+            }
+
+
         }
-        
 
-            return false;
 
-        
+        return false;
+
+
     }
 
     /// <summary>
@@ -626,15 +626,15 @@ public class Array2
     /// </summary>
     public bool ModThree(int[] nums)
     {
-        
 
-            for (int i = 0; i<nums.Length-2; i++)
-            {
+
+        for (int i = 0; i < nums.Length - 2; i++)
+        {
             if (nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0)
-                    {
+            {
                 return true;
             }
-            }
+        }
         for (int i = 0; i < nums.Length - 2; i++)
         {
             if (nums[i] % 2 == 1 && nums[i + 1] % 2 == 1 && nums[i + 2] % 2 == 1)
@@ -642,7 +642,7 @@ public class Array2
                 return true;
             }
         }
-        return false; 
+        return false;
     }
 
     /// <summary>
@@ -661,15 +661,15 @@ public class Array2
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i]==3)
+            if (nums[i] == 3)
             {
                 trisskaits++;
             }
         }
 
-        for (int i = 0; i < nums.Length-1; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            if (nums[i]==3 && nums[i+1]==3)
+            if (nums[i] == 3 && nums[i + 1] == 3)
             {
                 irblakus = true;
             }
@@ -677,11 +677,11 @@ public class Array2
 
         if (trisskaits == 3 && !irblakus)
         {
-                return true;
+            return true;
         }
-       
+
         return false;
-        
+
     }
 
     /// <summary>
@@ -693,34 +693,115 @@ public class Array2
     /// </summary>
     public bool TwoTwo(int[] nums)
     {
-
-
-        for (int i = 0; i < nums.Length - 1; i++)
-
+        if (nums.Length < 2)
         {
-            if (nums[i] == 2 && nums[i+1] ==2)
+            return false;
+        }
 
+        for (int i = 0; i < nums.Length; i++)
+
+            //if (nums.Length == 2 && nums[i] != 2)
+            //{
+            //    return false;
+            //}
+
+            if (nums[i]==2)
             {
-
-                for (int j = i + 2; j < nums.Length; j++)
+                i++;
+                if (nums[i]==2)
                 {
-                    if (nums[j] == 2 && nums[j + 1] != 2)
+                    i++;
+                    if(nums[i]!=2)
                     {
-                        return false;
+                        i++;
+                        if (nums[i]==2)
+                        {
+                            i++; // varbūt kaut kad jākāpjas atpakaļ i--;
+                            if (nums[i] == 2)
+                            {
+                                i++;
+                                if (nums[i] != 2)
+                                {
+                                    i++;
+                                    if (nums[i]==2)
+                                    {
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                                    return true;
+                            }
+                            return false;
+                        }
+                        return true;
                     }
-
-                    else return true;
+                    return true;
                 }
-
-
+                return false;
 
             }
 
+            return true;  
+        
+        
+        //if (nums.Length < 2)
+        //{
+        //    return false;
+        //}
 
+
+        //for (int i = 1; i < nums.Length; i++)
+        //{
+
+        //    if (nums.Length == 2 && nums[i - 1] != 2) 
+        //    {
+        //        return false;
+        //    }
+
+        //    if ((nums.Length > 2 && nums[i - 1] != 2 && nums[i] == 2 && nums[i - 1] != 2) || (nums.Length > 2 && nums[i - 1] != 2 && nums[i] != 2 && nums[i - 1] == 2)) // izdzēsu || (nums.Length > 2 && nums[i - 1] == 2 && nums[i] != 2 && nums[i - 1] == 2)
+        //             { 
+        //                if ((nums[i-1]==2 && nums[i]==2) || (nums[i + 1] == 2 && nums[i] == 2))
+        //                 {
+
+        //                    //if (nums.Length-1==2)
+        //                    //{
+        //                    // return false;
+        //                    //}
+                    
+        //                    //i++;
+        //                    //if ((nums[i-1]==2 && nums[i]!=2 && nums[i+1]==2)|| (nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2) || (nums[i - 1] != 2 && nums[i] != 2 && nums[i + 1] == 2))
+        //                    // { 
+        //                    // return false; 
+        //                    //}
+        //                  return true;
+        //                 }
+
+                   
+        //            return false; 
+        //                }
+
+           
         }
 
-        // if(nums[i] == 2 && nums[i+1]==2
-        // atgriezt pateisību ja 2 cikls izpēta tālāk un tur ir 2  kuram blakus nav 2
+          
+        
+        
+        
+        
+        
+        //if (nums.Length == 2 && nums[i] = !2)
+            //{
+            //    return false;
+            //}
+
+            //else if ((nums.Length > 2 && nums[i - 1] != 2 && nums[i] == 2 && nums[i - 1] != 2) || (nums.Length > 2 && nums[i - 1] != 2 && nums[i] != 2 && nums[i - 1] == 2))
+            //{
+            //    return false;
+            //}
+
+
+
+            //return true;
 
 
 
@@ -728,8 +809,292 @@ public class Array2
 
 
 
-        return false;
-    }
+
+
+
+
+            //for (int i = 0; i < nums.Length-1; i++) 
+            //{
+            //    if ((nums[i] != 2 && nums[i + 1] == 2) || (nums[i] == 2 && nums[i + 1] == 2) || (nums[i] == 2 && nums[i + 1] != 2)) // ŠĪ KONSTRUKCIJA NODROŠINA 1,3,4, testa izpildi
+            //    {
+            //        if ((nums[i] == 2 && nums[i + 1] != 2 && nums.Length == i+2 )|| (nums[i]!=2 && nums[i+1]==2 &&  nums.Length==i+2)) // izņēmu ārā (nums[i] != 2 && nums[i + 1] == 2 && nums.Length == i+2) ||
+            //        {
+            //            return false;
+            //            }
+            //        else if ((nums[i] != 2 && nums[i + 1] == 2) || (nums[i] == 2 && nums[i + 1] == 2)) 
+            //        {
+            //             i++;
+            //        }
+            //            //if (nums.Length-1==nums.Length && nums.Length==i+2)
+
+
+            //            if ((nums[i] == 2 && nums[i+i] != 2) || (nums[i-1] == 2 && nums[i] == 2 && nums[i + i] != 2))
+            //                //{
+            //                //    if (i <= nums.Length) // varbūt jānoņem = vai jāieliek -1
+            //                     {
+            //                         return false;
+            //                     }
+
+            //            else if ((nums[i] == 2 && nums[i+1] == 2) || (nums[i] == 2 && nums[i - 1] == 2)) // ŠIS IR LIEKS PAŠLAIK NEKO NEDOD
+            //        {
+            //            return true;
+            //        }
+            //}
+
+            ///*return true; /*// šo ieliku un neizpildās 4,5,6 tests
+            //if (nums[i] == 2 && nums[i + 1] != 2)
+            //{
+            //    if (i >= nums.Length)
+            //    {
+            //        return false;
+
+            //    }
+            //    else i++;
+            //    if (nums[i - 1] == 2 && nums[i] != 2 && nums[i + 1] != 2)
+            //    {
+            //        if (i >= nums.Length)
+            //        {
+            //            return false;
+
+            //        }
+            //        else i++;
+            //        Console.WriteLine("IR FALSE");
+            //        if (nums[i - 1] != 2 && nums[i] == 2)
+            //            if (i >= nums.Length)
+            //            {
+            //                return false;
+
+            //            }
+            //            else i++;
+            //        if (nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2)
+            //        {
+            //            return false;
+            //        }
+
+
+            //    }
+            //    // true
+            //}
+
+
+            //if (nums[i - 1] == 2 && nums[i] == 2 && nums[i + 1] == 2)
+            //{
+            //    i++;
+            //    Console.WriteLine(i + "pēc palielinasanas");
+            //}
+
+
+            //Console.WriteLine(nums + "@@@");
+            //    } // so ne
+            //    //else if (nums[i] == 2 && nums[i + 1] == 2)
+            //    //{
+
+            //    //}
+            //}
+
+            //return true;
+            
+        //if (nums.Length < 2)
+        //    return false;
+
+
+        //for (int i = 0; i < nums.Length - 1; i++)
+        //    if (nums[i] == 2 && nums[i + 1] == 2) // ja abi būs 2 tad turpinās
+        //    {
+        //        i++;
+
+        //    }
+        //    if (nums[i] == 2 && nums[i + 1] != 2)
+        //    {
+        //        if (i >= nums.Length)
+        //        {
+        //            return false;
+
+        //        }
+        //        else i++;
+        //        if (nums[i - 1] == 2 && nums[i] != 2 && nums[i + 1] != 2)
+        //        {
+        //            if (i >= nums.Length)
+        //            {
+        //                return false;
+
+        //            }
+        //            else i++;
+
+        //            if (nums[i - 1] != 2 && nums[i] == 2)
+        //                if (i >= nums.Length)
+        //                {
+        //                    return false;
+
+        //                }
+        //                else i++;
+        //            if (nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2)
+        //            {
+        //                return false;
+        //            }
+
+
+        //        }
+
+        //    }
+
+
+
+
+        //for (int i = 0; i < nums.Length - 1; i++)
+        //{
+        //    if (nums[i]!=2 && nums[i+1]!=2) // ja abi būs 2 tad turpinās
+        //    {
+        //        i++
+
+        //        if (nums[i-1] != 2 && nums[i] != 2 && nums[i + 1] != 2)
+        //        {
+
+        //        }
+
+
+        //        return false;
+        //    }
+        //    else if (nums[i]==2 && nums[i + 1] == 2)
+        //    {
+
+        //    }
+        //}
+
+
+
+        //    //    for (int i = 1; i < nums.Length - 1; i++)
+        //    //    {
+        //    //        if ((nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2) || nums[i] != 2 && nums[i + 1] == 2))
+        //    //        {
+        //    //        if ((nums[i - 1] == 2 && nums[i] == 2) || (nums[i + 1] == 2 && nums[i] == 2))
+        //    //        {
+        //    //            return true;
+        //    //        }
+        //    //        return false;
+        //    //    }
+
+        //    //}
+        //if (nums.Length < 2)
+        //{ return false; }
+
+        ////if (nums[0] == 2 && nums[1] == 2)
+        ////    return true;
+
+
+        //for (int i = 1; i < nums.Length-1; i++)
+        //{
+        //    if (nums[i]==2 && nums[i+1]==2)
+        //    {
+        //        continue;
+        //        {
+        //            if ( nums[i - 1] == 2 && nums[i] == 2) //nums[i + 1] == 2 &&
+        //            {
+        //                continue;
+        //                { 
+
+
+        //                    if ((nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2) || (nums[i-1] != 2 && nums[nums.Length] ==2)) //nums[i] = nums.Length-1 && 
+        //                    {
+        //                     return false;
+
+        //                    }
+        //                }
+
+
+        //            }return true;
+        //        }
+
+
+
+
+
+        //    }return true;
+
+        //    //if (nums.Length>2 && nums[i-1] !=2 && nums[i]==2 && nums[i+1] !=2)
+        //    //{
+        //    //    if (nums[0] != 2 && nums[1] == 2)
+        //    //    return false; 
+        //    //}
+        //    //else if (nums.Length <= 2 && nums[0] != 2 && nums[1] == 2)
+        //    //{
+        //    //    return false;
+        //    //}
+
+        //}
+        //if(nums.Length <2)
+        //        {
+        //            return false;
+        //        }
+
+
+
+        //int pozicijaKursakas2 = 0;
+        //int pozicijaKurBeidzas2 = 0;
+        //bool visparnav2 = false;  // 1;3;4 jābūt false bet testos True
+        //bool vaiirVismaz22 = false;
+        //bool vaiVelir2 = false;
+
+
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (nums[i]==2)
+        //    {
+        //        pozicijaKursakas2 = i;
+        //        pozicijaKurBeidzas2 = i;
+        //        break;
+        //    }
+        //    if (nums[i]!=2)
+        //    {
+        //        visparnav2 = true;
+        //    }
+        //}
+
+        //for (int j = pozicijaKursakas2+1; j < nums.Length; j++)
+        //{
+        //    if (nums[j] == 2)
+        //    {
+        //        pozicijaKurBeidzas2++;
+        //        vaiirVismaz22 = true;
+        //        continue;
+        //    }
+        //    else if (nums[j] != 2);
+        //    {
+        //        break;
+        //    }
+
+        //}
+
+        //for (int p = pozicijaKurBeidzas2+1; p < nums.Length; p++)
+        //{
+
+        //    if (nums[p]==2)
+        //    {
+        //        vaiVelir2 = true;
+        //    }
+
+        //}
+
+
+
+
+        //if (vaiVelir2)
+        //{
+        //    return false;
+        //}
+
+        //if (vaiirVismaz22 && !vaiVelir2)
+        //{
+    //    return true;
+    //}
+
+
+
+
+
+
+
+
 
     /// <summary>
     /// Return true if the group of N numbers at the start and end of the array are the same. For
