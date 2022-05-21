@@ -693,57 +693,86 @@ public class Array2
     /// </summary>
     public bool TwoTwo(int[] nums)
     {
-        if (nums.Length < 2)
-        {
-            return false;
-        }
+
 
         for (int i = 0; i < nums.Length; i++)
-
-            //if (nums.Length == 2 && nums[i] != 2)
-            //{
-            //    return false;
-            //}
-
-            if (nums[i]==2)
+         if (nums[i]==2) // vajag ||
             {
                 i++;
-                if (nums[i]==2)
+                if (i != 2)
                 {
                     i++;
-                    if(nums[i]!=2)
+                    if (nums[i] == 2)
                     {
                         i++;
-                        if (nums[i]==2)
+                        if (nums[i-1]!=2 && nums[i]==2 && nums[i+1]!=2)
                         {
-                            i++; // varbūt kaut kad jākāpjas atpakaļ i--;
-                            if (nums[i] == 2)
-                            {
-                                i++;
-                                if (nums[i] != 2)
-                                {
-                                    i++;
-                                    if (nums[i]==2)
-                                    {
-                                        return false;
-                                    }
-                                    return true;
-                                }
-                                    return true;
-                            }
                             return false;
                         }
-                        return true;
+                        return false;
                     }
-                    return true;
                 }
                 return false;
-
             }
 
-            return true;  
+
+
         
-        
+
+
+        throw new NotImplementedException();
+
+        //if (nums.Length < 2)
+        //{
+        //    return false;
+        //}
+
+        //for (int i = 0; i < nums.Length; i++)
+
+        //    //if (nums.Length == 2 && nums[i] != 2)
+        //    //{
+        //    //    return false;
+        //    //}
+
+        //    if (nums[i]==2)
+        //    {
+        //        i++;
+        //        if (nums[i]==2)
+        //        {
+        //            i++;
+        //            if(nums[i]!=2)
+        //            {
+        //                i++;
+        //                if (nums[i]==2)
+        //                {
+        //                    i++; // varbūt kaut kad jākāpjas atpakaļ i--;
+        //                    if (nums[i] == 2)
+        //                    {
+        //                        i++;
+        //                        if (nums[i] != 2)
+        //                        {
+        //                            i++;
+        //                            if (nums[i]==2)
+        //                            {
+        //                                return false;
+        //                            }
+        //                            return true;
+        //                        }
+        //                            return true;
+        //                    }
+        //                    return false;
+        //                }
+        //                return true;
+        //            }
+        //            return true;
+        //        }
+        //        return false;
+
+        //    }
+
+
+
+
         //if (nums.Length < 2)
         //{
         //    return false;
@@ -767,7 +796,7 @@ public class Array2
         //                    //{
         //                    // return false;
         //                    //}
-                    
+
         //                    //i++;
         //                    //if ((nums[i-1]==2 && nums[i]!=2 && nums[i+1]==2)|| (nums[i - 1] != 2 && nums[i] == 2 && nums[i + 1] != 2) || (nums[i - 1] != 2 && nums[i] != 2 && nums[i + 1] == 2))
         //                    // { 
@@ -776,12 +805,12 @@ public class Array2
         //                  return true;
         //                 }
 
-                   
+
         //            return false; 
         //                }
 
-           
-        }
+
+    }
 
           
         
