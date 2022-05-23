@@ -212,15 +212,24 @@ public class Array2
     {
 
 
-
-        for (int i = 0; i < nums.Length; i++)
+        foreach (var num in nums)
         {
-            if (nums[i] == 3 || nums[i] == 1)
+            if (num == 3 || num == 1)
             {
                 return false;
 
             }
         }
+
+
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (nums[i] == 3 || nums[i] == 1)
+        //    {
+        //        return false;
+
+        //    }
+        //}
         return true;
     }
 
