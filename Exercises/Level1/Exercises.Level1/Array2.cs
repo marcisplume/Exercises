@@ -703,33 +703,85 @@ public class Array2
     public bool TwoTwo(int[] nums)
     {
 
+        if (nums.Length < 2)
+        {
+            return false;
+        }
 
-        for (int i = 0; i < nums.Length; i++)
-         if (nums[i]==2) // vajag ||
+        if (nums.Length < 2)
+        {
+            return false;
+        }
+
+
+        if (nums[nums.Length - 2] !=2 && nums[nums.Length -1] ==2)
             {
-                i++;
-                if (i != 2)
-                {
-                    i++;
-                    if (nums[i] == 2)
-                    {
-                        i++;
-                        if (nums[i-1]!=2 && nums[i]==2 && nums[i+1]!=2)
-                        {
-                            return false;
-                        }
-                        return false;
-                    }
-                }
-                return false;
+            return false;
             }
 
+        for (int i = 1; i < nums.Length-1; i++)
+        {
+
+            if (nums[i] == 2 && nums[i + 1] != 2 && nums[i-1] !=2)
+                return false;
+
+        }
 
 
-        
+        return true;
 
 
-        throw new NotImplementedException();
+
+
+
+        //for (int i = 0; i < nums.Length-2; i++)
+
+        //     if (nums[i] == 2)
+        //     {
+        //        i =i+2;
+
+        //        if (nums[i-1]!=2 )
+        //        {
+        //            if (nums[i - 1] == 2)
+        //            {
+
+        //                continue;
+        //                i++;
+        //                return true;
+        //            }
+        //                return false;
+        //        }
+        //        return false;
+        //     }
+
+
+
+        //for (int i = 0; i < nums.Length; i++)
+        // if (nums[i]==2) // vajag ||
+        //    {
+        //        i++;
+        //        if (i != 2)
+        //        {
+        //            i++;
+        //            if (nums[i] == 2)
+        //            {
+        //                i++;
+        //                if (nums[i-1]!=2 && nums[i]==2 && nums[i+1]!=2)
+        //                {
+        //                    return false;
+        //                }
+        //                return false;
+        //            }
+        //        }
+        //        return false;
+        //    }
+
+
+
+
+
+
+
 
         //if (nums.Length < 2)
         //{
@@ -818,7 +870,7 @@ public class Array2
         //            return false; 
         //                }
 
-
+        
     }
 
           
@@ -1145,7 +1197,27 @@ public class Array2
     /// </summary>
     public bool SameEnds(int[] nums, int val)
     {
-        throw new NotImplementedException();
+
+       if (val < 1)
+        { return true; }
+
+        for (int i = 0; i <nums.Length ; i--) 
+        {
+
+            if (nums[i] == nums[nums.Length - val])
+            {
+                return true;
+                val--;
+            }
+
+            if (nums[i] != nums[nums.Length - val])
+            {
+                return false;               
+            }
+
+        }
+        return false;
+        
     }
 
     /// <summary>
@@ -1158,7 +1230,21 @@ public class Array2
     /// </summary>
     public bool TripleUp(int[] nums)
     {
-        throw new NotImplementedException();
+       if (nums.Length< 3)
+        {
+            return false ;
+        }
+
+        for (int i = 0; i < nums.Length-2; i++)
+        {
+            if ((nums[i] + 1 == nums[i + 1]) && (nums[i + 1] + 1 == nums[i + 2]))
+            {
+                return true;
+            }
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -1173,6 +1259,13 @@ public class Array2
     /// </summary>
     public int[] FizzArray3(int start, int end)
     {
+        
+        
+        
+        
+        
+        
+        
         throw new NotImplementedException();
     }
 
