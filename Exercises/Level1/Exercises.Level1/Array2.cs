@@ -1540,7 +1540,7 @@ public class Array2
         // ierakstām katru skaitli ja tas nav 10 ja 10 izlaižam TIAKI KA IZLAIŽAM AR COUNTIUE VAI I++?
 
 
-        throw new NotImplementedException();
+       
     }
 
     /// <summary>
@@ -1554,6 +1554,15 @@ public class Array2
     /// </summary>
     public int[] ZeroMax(int[] nums)
     {
+       
+        
+        
+        
+        
+        
+        
+        
+        
         throw new NotImplementedException();
     }
 
