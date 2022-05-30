@@ -1485,7 +1485,24 @@ public class Array2
     /// </summary>
     public int[] ZeroFront(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] newArray = new int[nums.Length];
+
+        int pozicija = 1;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+
+            if (nums[i] != 0)
+            {
+
+                newArray[newArray.Length - pozicija] = nums[i];
+                pozicija++;
+
+            }
+
+        }
+        return newArray;
+       
     }
 
     /// <summary>
@@ -1500,6 +1517,29 @@ public class Array2
     /// </summary>
     public int[] WithoutTen(int[] nums)
     {
+
+        int[] newArray = new int[nums.Length];
+
+        int pozicija = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != 10)
+            {
+                newArray[pozicija] = nums[i];
+                pozicija++;
+            }
+
+
+        }
+        return newArray;
+
+        // cik vietās ir 10
+        // jaunā masīva garums būs vecā masīva garums - 10 nieku skaits GARUMU NEVAJAG
+
+        // ierakstām katru skaitli ja tas nav 10 ja 10 izlaižam TIAKI KA IZLAIŽAM AR COUNTIUE VAI I++?
+
+
         throw new NotImplementedException();
     }
 
