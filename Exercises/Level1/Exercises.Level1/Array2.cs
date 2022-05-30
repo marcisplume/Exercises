@@ -1554,8 +1554,45 @@ public class Array2
     /// </summary>
     public int[] ZeroMax(int[] nums)
     {
-       
-        
+
+        int jaunsLielakais = 0;
+
+
+        for (int i = 0; i < nums.Length-1; i++) // ieliku -1 neizgāja 2;3;4
+        {
+
+            if (nums[i]==0) // atrodam 0
+            {
+                for (int j = 1; j < nums.Length; j++)
+                {
+                  
+
+                    if (nums[j]%2==1) 
+                    {
+                        if (jaunsLielakais < nums[j])
+                        {
+                            jaunsLielakais = nums[j];
+                        }
+                        continue;
+                    }
+                    continue;
+               
+                }
+           
+                if (jaunsLielakais>0)
+                    { nums[i] = jaunsLielakais; }
+            
+            }
+
+
+        }
+
+        return nums;
+
+
+        // Atrodam 0 
+
+        // pēc nulles atrodam 
         
         
         
