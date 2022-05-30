@@ -1555,7 +1555,7 @@ public class Array2
     public int[] ZeroMax(int[] nums)
     {
 
-        int jaunsLielakais = 0;
+        int jaunsLielakais = 0 ;
 
 
         for (int i = 0; i < nums.Length-1; i++) // ieliku -1 neizgāja 2;3;4
