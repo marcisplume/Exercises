@@ -1312,7 +1312,25 @@ public class Array2
     /// </summary>
     public int[] TenRun(int[] nums)
     {
-        throw new NotImplementedException();
+
+        // skatamies kad ir kāds skaitlis kurš ir 10
+
+        // Kā atrast ka tas ir 10
+
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+
+            if(nums[i] %10 == 0 && nums[i+1] %10 !=0)
+            {
+                nums[i+1] = nums[i];
+            }
+
+        }
+
+        return nums;
+        
+        
+        
     }
 
     /// <summary>
@@ -1326,7 +1344,42 @@ public class Array2
     /// </summary>
     public int[] Pre4(int[] nums)
     {
-        throw new NotImplementedException();
+
+
+        int arrayGarums = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != 4)
+            {
+                arrayGarums++;
+            }
+
+            if (nums[i] == 4)
+            {
+                break;
+            }
+
+        }
+
+        int[] newArray = new int[arrayGarums];
+
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            newArray[i] = nums[i];
+        }
+
+
+        return newArray;
+
+
+        // Kāds būs jaunā masīva garums?
+
+        //tad jārada jauns masīvs
+
+        // jāievoeto tur skaitļi ņemot vērā kā  i<nums1.length
+        
+        
     }
 
     /// <summary>
@@ -1340,7 +1393,43 @@ public class Array2
     /// </summary>
     public int[] Post4(int[] nums)
     {
-        throw new NotImplementedException();
+        int arrayGarums = 0;
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[nums.Length - i] != 4)
+            {
+
+                arrayGarums++;
+            }
+
+            if (nums[nums.Length - i] == 4)
+            {
+
+                break;
+            }
+        }
+
+        int[] newArray = new int[arrayGarums];
+
+
+        for (int i = 1; i < newArray.Length + 1; i++)
+        {
+
+            newArray[newArray.Length - i] = nums[nums.Length - i];
+
+
+        }
+
+
+        return newArray;
+
+
+
+        // skaitām no beigām līdz 4 kad 4 tad break
+        // 
+        // atrodam 4 poziciju un 
+
     }
 
     /// <summary>
@@ -1354,7 +1443,34 @@ public class Array2
     /// </summary>
     public int[] NotAlone(int[] nums, int val)
     {
-        throw new NotImplementedException();
+       
+        if(nums.Length < 3)
+        {
+            return nums;
+        }
+
+        int lielakais = 0;
+
+        for (int i = 1; i < nums.Length - 1; i++)
+        {
+            if (nums[i] == val && nums[i - 1] != nums[i] && nums[i + 1] != nums[i]) 
+            {
+                lielakais = Math.Max(nums[i - 1], nums[i + 1]);
+
+                nums[i] = lielakais;
+
+            }
+
+        }
+
+        return nums;
+
+        // sākam meklēt ar to skaitli kuram ir kaimiņi
+        // ja i != i-1 un i!= i+1
+        // izvērtējam kurš no i-1 un i+1 ir lielāks
+        // padaram i par to skaitli
+        // nevar būt mazāk par 3 nums.length
+
     }
 
     /// <summary>
