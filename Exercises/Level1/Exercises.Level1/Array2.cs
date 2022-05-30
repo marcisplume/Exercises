@@ -1259,14 +1259,15 @@ public class Array2
     /// </summary>
     public int[] FizzArray3(int start, int end)
     {
-        
-        
-        
-        
-        
-        
-        
-        throw new NotImplementedException();
+        int [] nums = new int[end - start];
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            nums[i] = start;
+            start++;
+        }
+
+        return nums;
     }
 
     /// <summary>
@@ -1279,7 +1280,25 @@ public class Array2
     /// </summary>
     public int[] ShiftLeft(int[] nums)
     {
-        throw new NotImplementedException();
+        
+        if (nums.Length < 1)
+        {
+            return nums;
+        }
+        int rezerve = nums[0];
+
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+
+            nums[i] = nums[i + 1];
+
+        }
+
+        nums[nums.Length - 1] = rezerve;
+                     
+
+        return nums;
+          
     }
 
     /// <summary>
