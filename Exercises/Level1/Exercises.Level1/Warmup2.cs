@@ -16,6 +16,13 @@ public class Warmup2
     /// </summary>
     public string StringTimes(string str, int n)
     {
+        
+        
+        
+        
+        
+        
+        
         throw new NotImplementedException();
     }
 
@@ -101,7 +108,21 @@ public class Warmup2
     /// </summary>
     public int ArrayCount9(int[] nums)
     {
-        throw new NotImplementedException();
+        int devinuSkaits = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i]==9)
+            {
+                devinuSkaits++;
+            }
+
+
+        }
+
+        return devinuSkaits;
+        
+        
     }
 
     /// <summary>
@@ -114,6 +135,32 @@ public class Warmup2
     /// </summary>
     public bool ArrayFront9(int[] nums)
     {
+       //if (nums.Length<4)
+       // {
+       //     return false;
+       // }
+        
+       
+        
+
+        for (int i = 0; i<nums.Length; i++)
+
+        {
+            int devinuSkaits = 0;
+            if (nums[i]!=9 && nums[i]<4)
+            {
+                devinuSkaits++;
+            }
+
+              bool ir = devinuSkaits == 0;
+
+             return ir;
+        }
+
+       
+        return true;
+       
+
         throw new NotImplementedException();
     }
 

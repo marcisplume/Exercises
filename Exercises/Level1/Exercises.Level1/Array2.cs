@@ -1688,7 +1688,6 @@ public class Array2
         return newArrayString;
 
 
-        throw new NotImplementedException();
     }
 }
 
