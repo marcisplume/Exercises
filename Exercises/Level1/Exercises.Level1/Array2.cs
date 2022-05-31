@@ -1633,13 +1633,6 @@ public class Array2
         // atrodam pāraskaitli un liekam masīvā no kreisās puses 
         // atrodam nepāra un liekam jaunajā masīvā no kreisās puses
 
-
-
-
-
-
-
-        throw new NotImplementedException();
     }
 
     /// <summary>
@@ -1658,6 +1651,43 @@ public class Array2
     /// </summary>
     public string[] FizzBuzz(int start, int end)
     {
+
+        int[] newArray = new int[end - start];
+        string[] newArrayString = new string[end - start];
+
+        for (int i = 0; start < end; i++)
+        {
+            newArray[i] = start;
+            newArrayString[i] = start.ToString();
+            start++;
+
+        }
+
+
+        for (int j = 0; j < newArrayString.Length; j++)
+        {
+
+            if (newArray[j] % 3 == 0 && newArray[j] % 5 == 0)
+            {
+                newArrayString[j] = "FizzBuzz";
+            }
+
+            if (newArray[j] % 3 == 0)
+            {
+                newArrayString[j] = "Fizz";
+            }
+
+            if (newArray[j] % 5 == 0)
+            {
+                newArrayString[j] = "Buzz";
+            }
+
+        }
+
+
+        return newArrayString;
+
+
         throw new NotImplementedException();
     }
 }
