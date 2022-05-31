@@ -1672,12 +1672,12 @@ public class Array2
                 newArrayString[j] = "FizzBuzz";
             }
 
-            if (newArray[j] % 3 == 0)
+            if (newArray[j] % 3 == 0 && newArray[j] % 5 != 0)
             {
                 newArrayString[j] = "Fizz";
             }
 
-            if (newArray[j] % 5 == 0)
+            if (newArray[j] % 5 == 0 && newArray[j] % 3 != 0)
             {
                 newArrayString[j] = "Buzz";
             }
