@@ -1585,14 +1585,7 @@ public class Array2
         // Atrodam 0 
 
         // pēc nulles atrodam 
-        
-        
-        
-        
-        
-        
-        
-        throw new NotImplementedException();
+
     }
 
     /// <summary>
@@ -1607,6 +1600,45 @@ public class Array2
     /// </summary>
     public int[] EvenOdd(int[] nums)
     {
+
+        int[] newArray = new int[nums.Length];
+
+        int pozicija = 1;
+        int pozicijaPara = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+
+            if (nums[i] % 2 ==  1)
+            {
+
+                newArray[newArray.Length - pozicija] = nums[i];
+                pozicija++;
+
+            }
+
+            if (nums[i] % 2 == 0)
+            {
+
+                newArray[pozicijaPara] = nums[i];
+                pozicijaPara++;
+
+            }
+
+
+        }
+        return newArray;
+
+        // izveidojam jaunu masīvu ar tādu pašu garumu kāds ir
+        // atrodam pāraskaitli un liekam masīvā no kreisās puses 
+        // atrodam nepāra un liekam jaunajā masīvā no kreisās puses
+
+
+
+
+
+
+
         throw new NotImplementedException();
     }
 
