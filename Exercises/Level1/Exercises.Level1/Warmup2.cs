@@ -97,7 +97,36 @@ public class Warmup2
     /// </summary>
     public bool DoubleX(string str)
     {
+       
+        if (str.Length<2)
+        {
+            return false;
+        }
+
+        if (str.Substring(str.Length - 1, 1) == "x" && str.Substring(str.Length - 2, 1) != "x")
+        {
+            return false;
+        }
+
+        for (int i = 0; i < str.Length-1; i++)
+        {
+            if (str.Substring(i, 1) == "x" && str.Substring(i + 1, 1) != "x")
+            {
+                return false;
+            }
+
+            //if (str.Substring(i, 1) != "x")
+            //{
+            //    return false;
+            //}
+
+            else return true;
+        }
+
         throw new NotImplementedException();
+
+
+
     }
 
     /// <summary>
