@@ -161,34 +161,19 @@ public class Warmup2
     /// </summary>
     public string StringSplosion(string str)
     {
-       // nosakām garumu
-
-        int strLength = str.Length;
-
-        int garums = 1;
+       
         string gala = "";
 
-        for (int i = 0; i < strLength; i++)
+        for (int i = 1; i <= str.Length; i++)
         {
-            if (garums<= strLength) // iespelajs str.Length-1
-            { 
-                gala += str.Substring(i, garums);
-                garums++;
-            }
-
-
-
+            
+                gala += str.Substring(0, i);
+            
         }
-
 
         return gala;
 
 
-
-
-
-
-        throw new NotImplementedException();
     }
 
     /// <summary>
