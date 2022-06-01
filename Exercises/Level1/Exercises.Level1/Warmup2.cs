@@ -103,6 +103,11 @@ public class Warmup2
             return false;
         }
 
+        if (!str.Contains("x"))
+        {
+            return false;
+        }
+        
         if (str.Substring(str.Length - 1, 1) == "x" && str.Substring(str.Length - 2, 1) != "x")
         {
             return false;
@@ -115,15 +120,10 @@ public class Warmup2
                 return false;
             }
 
-            //if (str.Substring(i, 1) != "x")
-            //{
-            //    return false;
-            //}
-
             else return true;
         }
 
-        throw new NotImplementedException();
+        return true;
 
 
 
@@ -138,7 +138,18 @@ public class Warmup2
     /// </summary>
     public string StringBits(string str)
     {
-        throw new NotImplementedException();
+
+        string gala = "";
+
+
+        for (int i = 0; i < str.Length; i++)
+        {
+            gala += str.Substring(i, 1);
+            i++;
+        }
+
+        return gala;
+        
     }
 
     /// <summary>
@@ -150,6 +161,33 @@ public class Warmup2
     /// </summary>
     public string StringSplosion(string str)
     {
+       // nosakām garumu
+
+        int strLength = str.Length;
+
+        int garums = 1;
+        string gala = "";
+
+        for (int i = 0; i < strLength; i++)
+        {
+            if (garums<= strLength) // iespelajs str.Length-1
+            { 
+                gala += str.Substring(i, garums);
+                garums++;
+            }
+
+
+
+        }
+
+
+        return gala;
+
+
+
+
+
+
         throw new NotImplementedException();
     }
 
