@@ -16,14 +16,17 @@ public class Warmup2
     /// </summary>
     public string StringTimes(string str, int n)
     {
-        
-        
-        
-        
-        
-        
-        
-        throw new NotImplementedException();
+              
+        string galaStr = "";
+
+        for (int i = 0; i < n; i++)
+        {
+            galaStr += str;
+            
+        }
+
+        return galaStr;
+
     }
 
     /// <summary>
@@ -36,7 +39,28 @@ public class Warmup2
     /// </summary>
     public string FrontTimes(string str, int n)
     {
-        throw new NotImplementedException();
+
+        string galaStr = "";
+
+        for (int i = 0; i < n; i++)
+        {
+            if (str.Length<=3)
+            {
+                galaStr += str;
+
+            }
+
+            if(str.Length>3)
+            {
+                galaStr += str.Substring(0, 3);
+            }
+
+        }
+
+
+        return galaStr;
+
+
     }
 
     /// <summary>
@@ -48,7 +72,20 @@ public class Warmup2
     /// </summary>
     public int CountXx(string str)
     {
-        throw new NotImplementedException();
+        
+        int n = 0;
+
+        for (int i = 0; i < str.Length-1; i++)
+        {
+            if (str.Substring(i,1)== "x" && str.Substring(i+1,1)== "x")
+            {
+                n++;
+                              
+            }
+        }
+
+        return n;
+      
     }
 
     /// <summary>
@@ -135,33 +172,25 @@ public class Warmup2
     /// </summary>
     public bool ArrayFront9(int[] nums)
     {
-       //if (nums.Length<4)
-       // {
-       //     return false;
-       // }
-        
        
-        
-
         for (int i = 0; i<nums.Length; i++)
 
         {
             int devinuSkaits = 0;
-            if (nums[i]!=9 && nums[i]<4)
+            if (nums[i]==9 && i<4)
             {
                 devinuSkaits++;
             }
 
-              bool ir = devinuSkaits == 0;
+            if (devinuSkaits > 0)
+            {
+                return true;
+            }
 
-             return ir;
         }
-
-       
-        return true;
-       
-
-        throw new NotImplementedException();
+               
+        return false;
+     
     }
 
     /// <summary>
@@ -173,6 +202,22 @@ public class Warmup2
     /// </summary>
     public bool Array123(int[] nums)
     {
+        
+        if(nums.Length < 3)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < nums.Length-2; i++)
+        {
+            if (nums[i]==1 && nums[i+1]==2 && nums[i+2]==3)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
         throw new NotImplementedException();
     }
 
@@ -235,7 +280,26 @@ public class Warmup2
     /// </summary>
     public int Array667(int[] nums)
     {
-        throw new NotImplementedException();
+        
+        if (nums.Length < 2)
+        {
+            return 0;
+        }
+
+        int skaitlisSesi = 0;
+
+        for (int i = 0; i < nums.Length-1; i++)
+        {
+            if (nums[i]==6 && nums[i+1]==6 || nums[i+1]==7)
+            {
+                skaitlisSesi++;
+                
+            }
+        }
+
+        return skaitlisSesi;
+
+
     }
 
     /// <summary>
@@ -247,11 +311,29 @@ public class Warmup2
     /// </summary>
     public bool NoTriples(int[] nums)
     {
-        throw new NotImplementedException();
+        if(nums.Length < 3)
+        {
+            return true;
+        }
+
+        for (int i = 0; i < nums.Length-2; i++)
+        {
+            if (nums[i]== nums[i+1] && nums[i+1]== nums[i+2])
+            {
+                return false;
+            }
+        }
+        
+        return true;
+        
     }
 
     /// <summary>
-    /// Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
+    /// Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, 
+    /// followed by the value plus 5, followed by the value minus 1. 
+    /// 
+    /// 
+    /// Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
     /// 
     /// has271([1, 2, 7, 1]) → true
     /// has271([1, 2, 8, 1]) → false
@@ -259,7 +341,30 @@ public class Warmup2
     /// </summary>
     public bool Has271(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        if (nums.Length<3)
+        {
+            return false;
+        }
+
+
+        for (int i = 0; i < nums.Length-2; i++)
+        {
+
+            if ((nums[i] ==2 && nums[i+1]==7 && nums[i+2]==2 || nums[i+2] == -1 || nums[i +2] == 3) || (nums[i+1] == nums[i]+5 && nums[i+2]== nums[i] -1))
+            {
+                return true;
+            }
+
+
+        }
+
+
+        return false;
+
+        
+        
+        
     }
 }
 
