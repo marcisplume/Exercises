@@ -298,7 +298,27 @@ public class Warmup2
     /// </summary>
     public int StringMatch(string a, string b)
     {
-        throw new NotImplementedException();
+        
+        if (a.Length<2 || b.Length<2)
+        {
+            return 0;
+        }
+        
+        int skaits = 0;
+
+
+        for (int i = 0; i < a.Length-1 && i < b.Length-1; i++)
+        {
+
+            if (a.Substring(i, 2) == b.Substring(i, 2))
+            {
+                skaits++;
+            }
+
+        }
+
+        return skaits;
+        
     }
 
     /// <summary>
