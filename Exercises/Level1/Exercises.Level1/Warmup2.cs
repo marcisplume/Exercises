@@ -330,14 +330,49 @@ public class Warmup2
     /// </summary>
     public string StringX(string str)
     {
-       // veidojam jaunu tukšu string
-       // ja x sākumā ieliekam to pie jaunā string
-       // ja burts ja burts nav vienāds ar  x rakstām klāt pie string
-       // ja burts beigās vienāds ar x tad rakstām klāt pie string
-        
-        
-        
-        
+
+
+        if (str.Length<2)
+        { return str; }
+
+        string gala = "";
+
+        if (str.Substring(0,1)=="x")
+        {
+            gala += str.Substring(0, 1);
+        }
+
+        for (int i = 0; i <= str.Length-1; i++)
+        {
+            if (str.Substring(i, 1) != "x")
+            {
+                gala += str.Substring(i, 1);
+            }
+
+        }
+
+        if (str.Substring(str.Length-1, 1) == "x")
+        {
+            gala += str.Substring(str.Length - 1, 1);
+        }
+
+
+
+        return gala;
+
+
+
+
+
+
+        // veidojam jaunu tukšu string
+        // ja x sākumā ieliekam to pie jaunā string
+        // ja burts ja burts nav vienāds ar  x rakstām klāt pie string
+        // ja burts beigās vienāds ar x tad rakstām klāt pie string
+
+
+
+
         throw new NotImplementedException();
     }
 
