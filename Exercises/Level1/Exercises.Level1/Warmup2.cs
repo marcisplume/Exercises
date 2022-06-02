@@ -418,9 +418,16 @@ public class Warmup2
         for (int i = 0; i < nums.Length-2; i++)
         {
 
-            if ((nums[i] ==2 && nums[i+1]==7 && nums[i+2]==2 || nums[i+2] == -1 || nums[i +2] == 3) || (nums[i+1] == nums[i]+5 && nums[i+2]== nums[i] -1))
+           if (nums[i + 1] == nums[i] + 5)
             {
-                return true;
+                int x = nums[i]-1;
+                int y = nums[i + 2];
+
+                if (y == x || y == x + 2 || y == x - 2 || y == x + 1 || y == x - 1)
+                {
+                    return true;
+                }
+
             }
 
 
