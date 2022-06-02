@@ -440,13 +440,26 @@ public class Warmup2
 
            if (nums[i + 1] == nums[i] + 5)
             {
-                int x = nums[i]-1;
-                int y = nums[i + 2];
-
-                if (y == x || y == x + 2 || y == x - 2 || y == x + 1 || y == x - 1)
+               
+                if (nums[i] - 1 - nums[i + 2] <=2 && nums[i] - 1 - nums[i + 2] >= -2)
                 {
                     return true;
                 }
+                
+                
+               // int x = nums[i]-1;
+               // int y = nums[i + 2];
+
+               //if (x-y<=2 && x-y>=-2)
+               // {
+               //     return true;
+               // }
+                
+                
+                //if (y == x || y == x + 2 || y == x - 2 || y == x + 1 || y == x - 1)
+                //{
+                //    return true;
+                //}
 
             }
 
