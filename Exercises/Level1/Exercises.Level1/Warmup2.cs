@@ -371,9 +371,6 @@ public class Warmup2
         // ja burts beigās vienāds ar x tad rakstām klāt pie string
 
 
-
-
-        throw new NotImplementedException();
     }
 
     /// <summary>
@@ -385,11 +382,31 @@ public class Warmup2
     /// </summary>
     public string AltPairs(string str)
     {
+        string gala = "";
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (i < str.Length)
+            { gala += str.Substring(i, 1); }
+
+
+
+            if (i + 1 < str.Length)
+            {
+                gala += str.Substring(i + 1, 1);
+            }
+            i += 3;
+
+        }
+
+
+        return gala;
+        
         throw new NotImplementedException();
     }
 
     /// <summary>
-    /// Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+    /// Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed,
+    /// but the "a" can be any char. The "yak" strings will not overlap.
     /// 
     /// stringYak("yakpak") → "pak"
     /// stringYak("pakyak") → "pak"
@@ -397,6 +414,36 @@ public class Warmup2
     /// </summary>
     public string StringYak(string str)
     {
+
+        string gala = "";
+
+        for (int i = 0; i < str.Length; i++)
+        {
+
+
+            // ja atrodam burtu y un y+2 == k izlaižam i+=3
+            // ja nav tad i,1 pieliekam klāt
+
+
+
+            if (str.Substring(i, 1) == "y" && str.Substring(i + 2, 1) == "k" && i < str.Length - 2 && i+2 < str.Length)
+            {
+               
+                // jāskatās uz garumu  kad meklē nākamos burtus pēc y jo j+2 pārsniedz garumu
+                
+                i += 2;
+            }
+            else gala += str.Substring(i, 1);
+
+
+
+
+        }
+
+
+
+
+        return gala;
         throw new NotImplementedException();
     }
 
