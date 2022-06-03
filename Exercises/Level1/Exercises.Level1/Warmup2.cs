@@ -417,29 +417,56 @@ public class Warmup2
 
         string gala = "";
 
-        for (int i = 0; i < str.Length; i++)
-        {
+        gala = str.Replace("yak", "");
+
+        ////int atlikums = str.Length % 3;
 
 
-            // ja atrodam burtu y un y+2 == k izlaižam i+=3
-            // ja nav tad i,1 pieliekam klāt
+        //for (int i = 0; i < str.Length; i++)
+        //{
+
+
+        //    if (str.Substring(i, 1) == "y") // un i nav tuvā par 2 vai vienu poziciju no beigām && i + 2 <= str.Length-2 && str.Substring(str.Length - 2, 1) != "y" && str.Length - i > 3
+        //    {
+
+        //        if ((i + 2) < str.Length && str.Substring(i + 2, 1) == "k")
+        //        {
+        //            i += 3;
+        //        }
+        //        gala += str.Substring(i, 1);
+
+        //    }
+        //    else gala += str.Substring(i, 1);
 
 
 
-            if (str.Substring(i, 1) == "y" && str.Substring(i + 2, 1) == "k" && i < str.Length - 2 && i+2 < str.Length)
-            {
-               
-                // jāskatās uz garumu  kad meklē nākamos burtus pēc y jo j+2 pārsniedz garumu
-                
-                i += 2;
-            }
-            else gala += str.Substring(i, 1);
+
+        //}
+
+        //if (gala.Substring(gala.Length - 3) == "yak")
+        //{
+        //    gala.Remove(gala.Length - 3);
+        //}
 
 
 
 
-        }
+        ////for (int i = 0; i < str.Length - 2; i++)
+        ////{
 
+
+        ////    if (str.Substring(i, 1) == "y" && str.Substring(i + 2, 1) == "k") // un i nav tuvā par 2 vai vienu poziciju no beigām && i + 2 <= str.Length-2 && str.Substring(str.Length - 2, 1) != "y" && str.Length - i > 3
+        ////    {
+        ////        i += 2;
+        ////    }
+        ////    else gala += str.Substring(i, 1);
+
+        ////}
+
+        ////if (atlikums > 0)
+        ////{
+        ////    gala += str.Substring(str.Length - atlikums);
+        ////}
 
 
 
