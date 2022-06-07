@@ -12,11 +12,17 @@ public class AsciiTextArt
     /// </summary>
     /// <param name="letters">ASCII art letters in range ABCDEFGHIJKLMNOPQRSTUVWXYZ?</param>
     /// <param name="word">Word to output in ascii art</param>
-    /// <param name="h">Height of letters</param>
-    /// <param name="l">Length of letters</param>
+    /// <param name="h">Height of letters</param> tas ir vienmēr 5 
+    /// <param name="l">Length of letters</param> // burta garuma parametrs  tas vienmār ir 4
     /// <returns></returns>
     public string[] GetArt(string[] letters, string word, int h, int l)
     {
+        
+        // pēdējais simbols ir '? zīme un tas ir jāizpirntē ja nav atrasts sarakstā
+        
+        
+        
+        
         throw new NotImplementedException();
     }
 }

@@ -28,6 +28,33 @@ public class Triangle
     /// <returns></returns>
     public string[] GetTRiangle(int n)
     {
+
+        string[] gala = new string[n];
+
+        char ir = '*';
+        char tukss = ' ';
+        int tuksums = n- 1;
+        int zvaigzne = 1;
+
+
+
+        for (int i = 0; i < n; i++)
+        {
+
+            gala[i] = (new String(tukss, tuksums)) + (new String(ir, zvaigzne)) ;
+            tuksums--;
+            zvaigzne += 2;
+
+        }
+
+        return gala;
+
+
+
+
+
+
+
         throw new NotImplementedException();
     }
 }
