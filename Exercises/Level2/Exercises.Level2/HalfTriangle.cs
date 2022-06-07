@@ -26,6 +26,24 @@ public class HalfTriangle
     /// <returns></returns>
     public string[] GetHalfTriangle(int n)
     {
-        throw new NotImplementedException();
+
+        string [] gala = new string[n];
+
+        char ir ='*';
+        int ip = 1;
+
+        
+
+        for (int i = 0; i < n; i++)
+        {
+
+            gala[i] = (new String(ir, ip)) ;
+                ip+=2;
+                       
+        }
+
+        return gala;
+
+                
     }
 }
