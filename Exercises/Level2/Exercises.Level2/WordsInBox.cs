@@ -17,16 +17,17 @@ public class WordsInBox
     /// <returns></returns>
     public string[] GetBox(string word)
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        throw new NotImplementedException();
+
+        int vardaGarums = word.Length;
+
+        string [] box = new string[3];
+
+
+        box[0] = new String('*', vardaGarums+4);
+        box[1] = $"* {word} *";
+        box[2] = new String('*', vardaGarums + 4);
+
+         return box;
+
     }
 }
