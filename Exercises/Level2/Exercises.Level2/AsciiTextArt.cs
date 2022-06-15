@@ -17,12 +17,55 @@ public class AsciiTextArt
     /// <returns></returns>
     public string[] GetArt(string[] letters, string word, int h, int l)
     {
+              
+        string alfabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
+        int alfabetaGarums = alfabets.Length;
+        char[] alfabetsChar = alfabets.ToCharArray();
+
+        string dotaisVards = word;
+        string arLieliemBurtiem = dotaisVards.ToUpper(); 
+        int DotaVardaGarums = arLieliemBurtiem.Length; 
+        char[] DotaVardaChar = arLieliemBurtiem.ToCharArray();  
+
+        int[] vardaBurtuAtrasanasVietas = new int[arLieliemBurtiem.Length];
+
+        for (int i = 0; i < arLieliemBurtiem.Length; i++)
+        {
+
+            for (int t = 0; t < alfabetsChar.Length; t++)
+            {
+                bool result = Char.IsLetter(DotaVardaChar[i]);
+
+                if (!result)
+                {
+                    vardaBurtuAtrasanasVietas[i] = 26;
+                }
+
+                else if (alfabetsChar[t] == DotaVardaChar[i])
+                {
+                    vardaBurtuAtrasanasVietas[i] = t;
+
+                }
+            }
+
+
+        }
+
+        string[] gala = new string[5];
+
+
+        for (int i = 0; i < vardaBurtuAtrasanasVietas.Length; i++)
+        {
+
+            for (int j = 0; j < gala.Length; j++)
+            {
+                gala[j] = gala[j] + letters[j].Substring(vardaBurtuAtrasanasVietas[i] * 4, 4);
+
+            }
+
+        }
+
+        return gala;
         
-        // pēdējais simbols ir '? zīme un tas ir jāizpirntē ja nav atrasts sarakstā
-        
-        
-        
-        
-        throw new NotImplementedException();
     }
 }
