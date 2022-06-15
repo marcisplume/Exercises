@@ -21,7 +21,6 @@ public class AsciiTextArt
         string alfabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
         int alfabetaGarums = alfabets.Length;
         char[] alfabetsChar = alfabets.ToCharArray();
-
         string dotaisVards = word;
         string arLieliemBurtiem = dotaisVards.ToUpper(); 
         int DotaVardaGarums = arLieliemBurtiem.Length; 
@@ -31,38 +30,28 @@ public class AsciiTextArt
 
         for (int i = 0; i < arLieliemBurtiem.Length; i++)
         {
-
             for (int t = 0; t < alfabetsChar.Length; t++)
             {
                 bool result = Char.IsLetter(DotaVardaChar[i]);
-
                 if (!result)
                 {
                     vardaBurtuAtrasanasVietas[i] = 26;
                 }
-
                 else if (alfabetsChar[t] == DotaVardaChar[i])
                 {
                     vardaBurtuAtrasanasVietas[i] = t;
-
                 }
             }
-
-
         }
 
         string[] gala = new string[5];
 
-
         for (int i = 0; i < vardaBurtuAtrasanasVietas.Length; i++)
         {
-
             for (int j = 0; j < gala.Length; j++)
             {
                 gala[j] = gala[j] + letters[j].Substring(vardaBurtuAtrasanasVietas[i] * 4, 4);
-
             }
-
         }
 
         return gala;
